@@ -138,6 +138,42 @@ class CustomerBehaviourEDA:
         plt.show()
         logging.info("Customers distribution plotted.")
 
+  def analyze_promotions(self):
+    """Analyze the impact of promotions on sales and customers."""
+    logging.info("Analyzing promotion effects on sales and customers.")
+
+    # Calculate average sales and customers for promo and no-promo
+    promo_sales = self.train_data.groupby('Promo')['Sales'].mean()
+    promo_customers = self.train_data.groupby('Promo')['Customers'].mean()
+
+    # Log the calculated values
+    logging.info(f"Average sales with promo: {promo_sales[1]:.2f}, without promo: {promo_sales[0]:.2f}.")
+    logging.info(f"Average customers with promo: {promo_customers[1]:.2f}, without promo: {promo_customers[0]:.2f}.")
+
+    # Plot average sales by promo status
+    plt.figure(figsize=(8, 5))
+    promo_sales.plot(kind='bar', color=['blue', 'orange'], alpha=0.7)
+    plt.title('Average Sales by Promo Status')
+    plt.xlabel('Promo Status (0 = No Promo, 1 = Promo)')
+    plt.ylabel('Average Sales')
+    plt.xticks(rotation=0)
+    for i, v in enumerate(promo_sales):
+        plt.text(i, v + 0.02 * max(promo_sales), f"{v:.1f}", ha='center', fontsize=10)
+    plt.show()
+    logging.info("Plotted average sales by promo status.")
+
+    # Plot average customers by promo status
+    plt.figure(figsize=(8, 5))
+    promo_customers.plot(kind='bar', color=['blue', 'orange'], alpha=0.7)
+    plt.title('Average Customers by Promo Status')
+    plt.xlabel('Promo Status (0 = No Promo, 1 = Promo)')
+    plt.ylabel('Average Customers')
+    plt.xticks(rotation=0)
+    for i, v in enumerate(promo_customers):
+        plt.text(i, v + 0.02 * max(promo_customers), f"{v:.1f}", ha='center', fontsize=10)
+    plt.show()
+    logging.info("Plotted average customers by promo status.")
+
 
 
 

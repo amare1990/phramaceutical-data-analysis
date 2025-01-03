@@ -63,3 +63,25 @@
 2025-01-03 19:30:29,789 - INFO - Visualizing feature distributions.
 2025-01-03 19:30:34,680 - INFO - Sales distribution plotted.
 2025-01-03 19:30:39,266 - INFO - Customers distribution plotted.
+2025-01-03 19:43:01,271 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:43:02,843 - INFO - Starting data cleaning.
+2025-01-03 19:43:02,860 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:43:02,910 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:43:03,069 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:43:03,245 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:43:03,409 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:43:09,475 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:43:10,873 - INFO - Visualizing feature distributions.
+2025-01-03 19:43:15,033 - INFO - Sales distribution plotted.
+2025-01-03 19:43:18,990 - INFO - Customers distribution plotted.
+2025-01-03 19:43:18,995 - INFO - Analyzing promotion effects on sales.
+2025-01-03 19:43:19,214 - INFO - Average sales with promo: 7991.152045969903, without promo: 4406.050805160786.
+2025-01-03 19:43:19,214 - INFO - Average customers with promo: 820.0988146773861, without promo: 517.8235417537579.
+2025-01-03 19:43:19,425 - INFO - Plotted average sales by promo status.
+2025-01-03 19:47:44,313 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:47:46,420 - INFO - Starting data cleaning.
+2025-01-03 19:47:46,435 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:47:46,482 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:47:46,660 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:47:46,848 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:47:47,000 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
