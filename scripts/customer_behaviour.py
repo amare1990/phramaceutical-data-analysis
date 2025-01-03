@@ -206,3 +206,25 @@ class CustomerBehaviourEDA:
       plt.title("Feature orrelation Matrix")
       plt.show()
       logging.info("Plotting correlation matrix done. ")
+
+  def generate_summary(self):
+    """Generate and log summary statistics for both numerical and categorical data."""
+    logging.info("Generating summary statistics for training data.")
+
+    # Generate summary for numerical data
+    num_summary = self.train_data.describe()
+
+    # Generate summary for categorical (object) data
+    cat_summary = self.train_data.describe(include=['object'])
+
+    logging.info("Summary statistics for numerical data:")
+    logging.info(f"\n{num_summary}")
+
+    logging.info("Summary statistics for categorical data:")
+    logging.info(f"\n{cat_summary}")
+
+    print("Numerical Summary:")
+    print(num_summary)
+    print("\nCategorical Summary:")
+    print(cat_summary)
+

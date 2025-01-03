@@ -133,3 +133,69 @@
 2025-01-03 20:09:22,343 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
 2025-01-03 20:09:23,937 - INFO - Checking correlations between numerical features. 
 2025-01-03 20:09:24,713 - INFO - Plotting correlation matrix done. 
+2025-01-03 20:12:33,871 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:12:36,258 - INFO - Starting data cleaning.
+2025-01-03 20:12:36,290 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:12:36,338 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:12:36,491 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:12:36,663 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:12:36,814 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:12:42,242 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:12:44,507 - INFO - Generating summary statistics for training data.
+2025-01-03 20:12:44,851 - INFO - Summary statistics:
+              Store     DayOfWeek         Sales     Customers          Open  \
+count  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06   
+mean   5.584297e+02  3.998341e+00  5.773819e+03  6.331459e+02  8.301067e-01   
+std    3.219087e+02  1.997391e+00  3.849926e+03  4.644117e+02  3.755392e-01   
+min    1.000000e+00  1.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    2.800000e+02  2.000000e+00  3.727000e+03  4.050000e+02  1.000000e+00   
+50%    5.580000e+02  4.000000e+00  5.744000e+03  6.090000e+02  1.000000e+00   
+75%    8.380000e+02  6.000000e+00  7.856000e+03  8.370000e+02  1.000000e+00   
+max    1.115000e+03  7.000000e+00  4.155100e+04  7.388000e+03  1.000000e+00   
+
+              Promo  SchoolHoliday  
+count  1.017209e+06   1.017209e+06  
+mean   3.815145e-01   1.786467e-01  
+std    4.857586e-01   3.830564e-01  
+min    0.000000e+00   0.000000e+00  
+25%    0.000000e+00   0.000000e+00  
+50%    0.000000e+00   0.000000e+00  
+75%    1.000000e+00   0.000000e+00  
+max    1.000000e+00   1.000000e+00  
+2025-01-03 20:15:38,196 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:15:40,213 - INFO - Starting data cleaning.
+2025-01-03 20:15:40,245 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:15:40,293 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:15:40,448 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:15:40,645 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:15:40,806 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:15:45,562 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:15:47,002 - INFO - Generating summary statistics for training data.
+2025-01-03 20:15:47,399 - INFO - Summary statistics for numerical data:
+2025-01-03 20:15:47,403 - INFO - 
+              Store     DayOfWeek         Sales     Customers          Open  \
+count  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06   
+mean   5.584297e+02  3.998341e+00  5.773819e+03  6.331459e+02  8.301067e-01   
+std    3.219087e+02  1.997391e+00  3.849926e+03  4.644117e+02  3.755392e-01   
+min    1.000000e+00  1.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    2.800000e+02  2.000000e+00  3.727000e+03  4.050000e+02  1.000000e+00   
+50%    5.580000e+02  4.000000e+00  5.744000e+03  6.090000e+02  1.000000e+00   
+75%    8.380000e+02  6.000000e+00  7.856000e+03  8.370000e+02  1.000000e+00   
+max    1.115000e+03  7.000000e+00  4.155100e+04  7.388000e+03  1.000000e+00   
+
+              Promo  SchoolHoliday  
+count  1.017209e+06   1.017209e+06  
+mean   3.815145e-01   1.786467e-01  
+std    4.857586e-01   3.830564e-01  
+min    0.000000e+00   0.000000e+00  
+25%    0.000000e+00   0.000000e+00  
+50%    0.000000e+00   0.000000e+00  
+75%    1.000000e+00   0.000000e+00  
+max    1.000000e+00   1.000000e+00  
+2025-01-03 20:15:47,403 - INFO - Summary statistics for categorical data:
+2025-01-03 20:15:47,404 - INFO - 
+              Date StateHoliday
+count      1017209      1017209
+unique         942            4
+top     2015-07-31            0
+freq          1115       986159
