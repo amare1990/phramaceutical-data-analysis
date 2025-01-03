@@ -114,3 +114,22 @@
 2025-01-03 19:55:23,035 - INFO - Plotted average sales by state holiday.
 2025-01-03 19:55:23,035 - INFO - Exploring holiday effects on Customers.
 2025-01-03 19:55:23,259 - INFO - Plotted average Customers by state holiday.
+2025-01-03 20:06:35,317 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:06:37,814 - INFO - Starting data cleaning.
+2025-01-03 20:06:37,839 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:06:37,882 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:06:38,047 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:06:38,220 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:06:38,370 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:06:44,266 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:06:45,505 - INFO - Checking correlations between numerical features. 
+2025-01-03 20:09:13,747 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:09:16,336 - INFO - Starting data cleaning.
+2025-01-03 20:09:16,369 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:09:16,419 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:09:16,590 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:09:16,769 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:09:16,923 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:09:22,343 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:09:23,937 - INFO - Checking correlations between numerical features. 
+2025-01-03 20:09:24,713 - INFO - Plotting correlation matrix done. 

@@ -191,4 +191,18 @@ class CustomerBehaviourEDA:
         logging.info("Plotted average Customers by state holiday.")
 
 
+  def check_correlations(self):
+      """Check correlations between numerical features. """
+      logging.info("Checking correlations between numerical features. ")
 
+      # Select only numerical columns
+      numerical_data = self.train_data.select_dtypes(include=['number'])
+
+      # Compute the correlation matrix
+      correlations = numerical_data.corr()
+
+      plt.figure(figsize=(12, 8))
+      sns.heatmap(correlations, annot=True, cmap='coolwarm', fmt='.2f')
+      plt.title("Feature orrelation Matrix")
+      plt.show()
+      logging.info("Plotting correlation matrix done. ")
