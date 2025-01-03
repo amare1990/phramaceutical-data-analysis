@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import seaborn as sn
+import seaborn as sns
 
 import logging
 
@@ -92,28 +92,28 @@ class CustomerBehaviourEDA:
     #                 logging.info(f"Column '{col}' in {dataset_name} converted to string.")
 
     # Fill missing values in train_data and store_data
-    for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
-        if 'CompetitionDistance' in dataset.columns:
-            dataset['CompetitionDistance'].fillna(dataset['CompetitionDistance'].median(), inplace=True)
-            logging.info(f"Filled missing 'CompetitionDistance' in {dataset_name}.")
+    # for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
+    if 'CompetitionDistance' in self.merged_train_data.columns:
+        self.merged_train_data['CompetitionDistance'].fillna(self.merged_train_data['CompetitionDistance'].median(), inplace=True)
+        logging.info(f"Filled missing 'CompetitionDistance' in train data.")
 
-        if 'PromoInterval' in dataset.columns:
-            dataset['PromoInterval'].fillna('None', inplace=True)
-            logging.info(f"Filled missing 'PromoInterval' in {dataset_name}.")
+    if 'PromoInterval' in self.merged_train_data.columns:
+        self.merged_train_data['PromoInterval'].fillna('None', inplace=True)
+        logging.info(f"Filled missing 'PromoInterval' in train data.")
 
     # Handle outliers in numeric columns for train_data and store_data
     # for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
     numeric_columns = ['Sales', 'Customers', 'CompetitionDistance']
     for col in numeric_columns:
-        if col in dataset.columns:
-            q1 = dataset[col].quantile(0.25)
-            q3 = dataset[col].quantile(0.75)
+        if col in self.merged_train_data.columns:
+            q1 = self.merged_train_data[col].quantile(0.25)
+            q3 = self.merged_train_data[col].quantile(0.75)
             iqr = q3 - q1
             lower_bound = q1 - 1.5 * iqr
             upper_bound = q3 + 1.5 * iqr
-            outliers = dataset[(dataset[col] < lower_bound) | (dataset[col] > upper_bound)]
-            dataset.drop(outliers.index, inplace=True)
-            logging.info(f"Outliers removed from column '{col}' in {dataset_name}. Total removed: {len(outliers)}")
+            outliers = self.merged_train_data[(self.merged_train_data[col] < lower_bound) | (self.merged_train_data[col] > upper_bound)]
+            self.merged_train_data.drop(outliers.index, inplace=True)
+            logging.info(f"Outliers removed from column '{col}' in train_data. Total removed: {len(outliers)}")
 
 
     # Save the cleaned data
@@ -122,7 +122,21 @@ class CustomerBehaviourEDA:
     logging.info(f"Cleaned data saved to {train_cleaned_path} and {test_cleaned_path}.")
 
 
+  def visualize_distributions(self):
+        """Visualize distributions of key features."""
+        logging.info("Visualizing feature distributions.")
 
+        plt.figure(figsize=(10, 5))
+        sns.histplot(self.train_data['Sales'], kde=True, bins=30)
+        plt.title('Sales Distribution')
+        plt.show()
+        logging.info("Sales distribution plotted.")
+
+        plt.figure(figsize=(10, 5))
+        sns.histplot(self.train_data['Customers'], kde=True, bins=30)
+        plt.title('Customers Distribution')
+        plt.show()
+        logging.info("Customers distribution plotted.")
 
 
 
