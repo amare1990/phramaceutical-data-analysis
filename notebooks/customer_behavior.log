@@ -1,0 +1,620 @@
+2025-01-03 14:48:02,299 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 14:49:20,619 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 16:20:47,899 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 16:23:25,353 - INFO - Starting data cleaning.
+2025-01-03 16:28:46,051 - INFO - Starting data cleaning.
+2025-01-03 16:28:49,746 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 16:28:49,806 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 16:28:49,807 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 16:28:49,810 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 16:28:50,052 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 16:28:50,299 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 16:28:50,628 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 16:28:50,640 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 16:28:58,847 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 17:28:31,614 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 17:28:33,941 - INFO - Starting data cleaning.
+2025-01-03 17:28:33,999 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 17:28:34,072 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 17:28:34,075 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 17:28:34,078 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 17:28:34,086 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 17:28:41,436 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 17:36:27,458 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 17:36:29,155 - INFO - Starting data cleaning.
+2025-01-03 17:36:29,178 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 17:36:29,233 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 17:36:29,234 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 17:36:29,236 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 17:36:29,244 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 17:36:35,368 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 17:43:33,127 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 17:43:37,213 - INFO - Starting data cleaning.
+2025-01-03 17:43:37,253 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 17:43:37,320 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 17:43:37,322 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 17:43:37,324 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 17:43:37,330 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 17:43:43,177 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:14:29,069 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:14:32,897 - INFO - Starting data cleaning.
+2025-01-03 19:14:32,944 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 19:14:33,013 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 19:14:33,014 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 19:14:33,016 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 19:14:33,022 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 19:14:40,273 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:23:12,549 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:23:14,209 - INFO - Starting data cleaning.
+2025-01-03 19:23:14,246 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:23:14,293 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:23:14,497 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:23:14,688 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:23:14,846 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:23:21,257 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:28:59,348 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:29:02,849 - INFO - Starting data cleaning.
+2025-01-03 19:29:02,867 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:29:02,916 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:29:03,131 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:29:03,361 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:29:03,531 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:29:09,236 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:30:29,789 - INFO - Visualizing feature distributions.
+2025-01-03 19:30:34,680 - INFO - Sales distribution plotted.
+2025-01-03 19:30:39,266 - INFO - Customers distribution plotted.
+2025-01-03 19:43:01,271 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:43:02,843 - INFO - Starting data cleaning.
+2025-01-03 19:43:02,860 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:43:02,910 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:43:03,069 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:43:03,245 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:43:03,409 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:43:09,475 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:43:10,873 - INFO - Visualizing feature distributions.
+2025-01-03 19:43:15,033 - INFO - Sales distribution plotted.
+2025-01-03 19:43:18,990 - INFO - Customers distribution plotted.
+2025-01-03 19:43:18,995 - INFO - Analyzing promotion effects on sales.
+2025-01-03 19:43:19,214 - INFO - Average sales with promo: 7991.152045969903, without promo: 4406.050805160786.
+2025-01-03 19:43:19,214 - INFO - Average customers with promo: 820.0988146773861, without promo: 517.8235417537579.
+2025-01-03 19:43:19,425 - INFO - Plotted average sales by promo status.
+2025-01-03 19:47:44,313 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:47:46,420 - INFO - Starting data cleaning.
+2025-01-03 19:47:46,435 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:47:46,482 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:47:46,660 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:47:46,848 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:47:47,000 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:47:52,184 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:47:53,836 - INFO - Visualizing feature distributions.
+2025-01-03 19:47:57,790 - INFO - Sales distribution plotted.
+2025-01-03 19:48:01,654 - INFO - Customers distribution plotted.
+2025-01-03 19:48:01,660 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 19:48:01,708 - INFO - Average sales with promo: 7991.15, without promo: 4406.05.
+2025-01-03 19:48:01,708 - INFO - Average customers with promo: 820.10, without promo: 517.82.
+2025-01-03 19:48:01,938 - INFO - Plotted average sales by promo status.
+2025-01-03 19:48:02,207 - INFO - Plotted average customers by promo status.
+2025-01-03 19:55:03,147 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:55:07,328 - INFO - Starting data cleaning.
+2025-01-03 19:55:07,343 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:55:07,390 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:55:07,556 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:55:07,815 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:55:07,973 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:55:13,189 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:55:14,032 - INFO - Visualizing feature distributions.
+2025-01-03 19:55:18,015 - INFO - Sales distribution plotted.
+2025-01-03 19:55:22,359 - INFO - Customers distribution plotted.
+2025-01-03 19:55:22,365 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 19:55:22,401 - INFO - Average sales with promo: 7991.15, without promo: 4406.05.
+2025-01-03 19:55:22,401 - INFO - Average customers with promo: 820.10, without promo: 517.82.
+2025-01-03 19:55:22,599 - INFO - Plotted average sales by promo status.
+2025-01-03 19:55:22,812 - INFO - Plotted average customers by promo status.
+2025-01-03 19:55:22,818 - INFO - Exploring holiday effects on sales.
+2025-01-03 19:55:23,035 - INFO - Plotted average sales by state holiday.
+2025-01-03 19:55:23,035 - INFO - Exploring holiday effects on Customers.
+2025-01-03 19:55:23,259 - INFO - Plotted average Customers by state holiday.
+2025-01-03 20:06:35,317 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:06:37,814 - INFO - Starting data cleaning.
+2025-01-03 20:06:37,839 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:06:37,882 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:06:38,047 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:06:38,220 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:06:38,370 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:06:44,266 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:06:45,505 - INFO - Checking correlations between numerical features. 
+2025-01-03 20:09:13,747 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:09:16,336 - INFO - Starting data cleaning.
+2025-01-03 20:09:16,369 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:09:16,419 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:09:16,590 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:09:16,769 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:09:16,923 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:09:22,343 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:09:23,937 - INFO - Checking correlations between numerical features. 
+2025-01-03 20:09:24,713 - INFO - Plotting correlation matrix done. 
+2025-01-03 20:12:33,871 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:12:36,258 - INFO - Starting data cleaning.
+2025-01-03 20:12:36,290 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:12:36,338 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:12:36,491 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:12:36,663 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:12:36,814 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:12:42,242 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:12:44,507 - INFO - Generating summary statistics for training data.
+2025-01-03 20:12:44,851 - INFO - Summary statistics:
+              Store     DayOfWeek         Sales     Customers          Open  \
+count  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06   
+mean   5.584297e+02  3.998341e+00  5.773819e+03  6.331459e+02  8.301067e-01   
+std    3.219087e+02  1.997391e+00  3.849926e+03  4.644117e+02  3.755392e-01   
+min    1.000000e+00  1.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    2.800000e+02  2.000000e+00  3.727000e+03  4.050000e+02  1.000000e+00   
+50%    5.580000e+02  4.000000e+00  5.744000e+03  6.090000e+02  1.000000e+00   
+75%    8.380000e+02  6.000000e+00  7.856000e+03  8.370000e+02  1.000000e+00   
+max    1.115000e+03  7.000000e+00  4.155100e+04  7.388000e+03  1.000000e+00   
+
+              Promo  SchoolHoliday  
+count  1.017209e+06   1.017209e+06  
+mean   3.815145e-01   1.786467e-01  
+std    4.857586e-01   3.830564e-01  
+min    0.000000e+00   0.000000e+00  
+25%    0.000000e+00   0.000000e+00  
+50%    0.000000e+00   0.000000e+00  
+75%    1.000000e+00   0.000000e+00  
+max    1.000000e+00   1.000000e+00  
+2025-01-03 20:15:38,196 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:15:40,213 - INFO - Starting data cleaning.
+2025-01-03 20:15:40,245 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:15:40,293 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:15:40,448 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:15:40,645 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:15:40,806 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:15:45,562 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:15:47,002 - INFO - Generating summary statistics for training data.
+2025-01-03 20:15:47,399 - INFO - Summary statistics for numerical data:
+2025-01-03 20:15:47,403 - INFO - 
+              Store     DayOfWeek         Sales     Customers          Open  \
+count  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06  1.017209e+06   
+mean   5.584297e+02  3.998341e+00  5.773819e+03  6.331459e+02  8.301067e-01   
+std    3.219087e+02  1.997391e+00  3.849926e+03  4.644117e+02  3.755392e-01   
+min    1.000000e+00  1.000000e+00  0.000000e+00  0.000000e+00  0.000000e+00   
+25%    2.800000e+02  2.000000e+00  3.727000e+03  4.050000e+02  1.000000e+00   
+50%    5.580000e+02  4.000000e+00  5.744000e+03  6.090000e+02  1.000000e+00   
+75%    8.380000e+02  6.000000e+00  7.856000e+03  8.370000e+02  1.000000e+00   
+max    1.115000e+03  7.000000e+00  4.155100e+04  7.388000e+03  1.000000e+00   
+
+              Promo  SchoolHoliday  
+count  1.017209e+06   1.017209e+06  
+mean   3.815145e-01   1.786467e-01  
+std    4.857586e-01   3.830564e-01  
+min    0.000000e+00   0.000000e+00  
+25%    0.000000e+00   0.000000e+00  
+50%    0.000000e+00   0.000000e+00  
+75%    1.000000e+00   0.000000e+00  
+max    1.000000e+00   1.000000e+00  
+2025-01-03 20:15:47,403 - INFO - Summary statistics for categorical data:
+2025-01-03 20:15:47,404 - INFO - 
+              Date StateHoliday
+count      1017209      1017209
+unique         942            4
+top     2015-07-31            0
+freq          1115       986159
+2025-01-03 20:40:33,485 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:40:37,606 - INFO - Starting data cleaning.
+2025-01-03 20:40:37,632 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:40:37,722 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:40:37,941 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:40:38,257 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:40:38,495 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:40:48,148 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 20:40:50,104 - INFO - Visualizing feature distributions.
+2025-01-03 20:40:54,580 - INFO - Sales distribution plotted.
+2025-01-03 20:40:59,501 - INFO - Customers distribution plotted.
+2025-01-03 20:43:53,064 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 20:43:53,135 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-03 20:43:53,135 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-03 20:43:53,706 - INFO - Plotted average sales by promo status.
+2025-01-03 20:43:54,090 - INFO - Plotted average customers by promo status.
+2025-01-03 20:44:03,169 - INFO - Exploring holiday effects on sales.
+2025-01-03 20:44:03,638 - INFO - Plotted average sales by state holiday.
+2025-01-03 20:44:03,638 - INFO - Exploring holiday effects on Customers.
+2025-01-03 20:44:04,020 - INFO - Plotted average Customers by state holiday.
+2025-01-03 20:44:10,630 - INFO - Checking correlations between numerical features. 
+2025-01-03 20:44:12,796 - INFO - Plotting correlation matrix done. 
+2025-01-03 20:44:18,204 - INFO - Generating summary statistics for training data.
+2025-01-03 20:44:19,808 - INFO - Summary statistics for numerical data:
+2025-01-03 20:44:19,815 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-03 20:44:19,815 - INFO - Summary statistics for categorical data:
+2025-01-03 20:44:19,817 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-03 20:53:33,640 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 20:53:37,348 - INFO - Starting data cleaning.
+2025-01-03 20:53:37,391 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 20:53:37,449 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 20:53:37,623 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 20:53:37,818 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 20:53:38,044 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 20:53:47,911 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-03 20:53:52,329 - INFO - Visualizing feature distributions.
+2025-01-03 20:53:58,006 - INFO - Sales distribution plotted.
+2025-01-03 20:54:03,648 - INFO - Customers distribution plotted.
+2025-01-03 20:54:03,657 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 20:54:03,699 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-03 20:54:03,699 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-03 20:54:04,077 - INFO - Plotted average sales by promo status.
+2025-01-03 20:54:04,520 - INFO - Plotted average customers by promo status.
+2025-01-03 20:54:04,530 - INFO - Exploring holiday effects on sales.
+2025-01-03 20:54:04,923 - INFO - Plotted average sales by state holiday.
+2025-01-03 20:54:04,924 - INFO - Exploring holiday effects on Customers.
+2025-01-03 20:54:05,360 - INFO - Plotted average Customers by state holiday.
+2025-01-03 20:54:05,373 - INFO - Checking correlations between numerical features. 
+2025-01-03 20:54:07,424 - INFO - Plotting correlation matrix done. 
+2025-01-03 20:54:07,437 - INFO - Generating summary statistics for training data.
+2025-01-03 20:54:08,595 - INFO - Summary statistics for numerical data:
+2025-01-03 20:54:08,601 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-03 20:54:08,602 - INFO - Summary statistics for categorical data:
+2025-01-03 20:54:08,604 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-03 21:59:29,796 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 21:59:31,306 - INFO - Starting data cleaning.
+2025-01-03 21:59:31,319 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 21:59:31,359 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 21:59:32,063 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 21:59:32,241 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 21:59:32,392 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 22:06:47,579 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 22:06:48,781 - INFO - Starting data cleaning.
+2025-01-03 22:06:48,795 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 22:06:48,836 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 22:06:48,999 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 22:06:49,183 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 22:06:49,334 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 22:06:55,248 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-03 22:06:55,255 - INFO - Visualizing feature distributions.
+2025-01-03 22:06:59,968 - INFO - Sales distribution plotted.
+2025-01-03 22:07:03,638 - INFO - Customers distribution plotted.
+2025-01-03 22:07:03,638 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 22:07:03,672 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-03 22:07:03,672 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-03 22:07:04,069 - INFO - Plotted average sales by promo status.
+2025-01-03 22:07:04,434 - INFO - Plotted average customers by promo status.
+2025-01-03 22:07:04,434 - INFO - Exploring holiday effects on sales.
+2025-01-03 22:07:04,813 - INFO - Plotted average sales by state holiday.
+2025-01-03 22:07:04,813 - INFO - Exploring holiday effects on Customers.
+2025-01-03 22:07:05,188 - INFO - Plotted average Customers by state holiday.
+2025-01-03 22:07:05,188 - INFO - Checking correlations between numerical features. 
+2025-01-03 22:07:06,402 - INFO - Plotting correlation matrix done. 
+2025-01-03 22:07:06,402 - INFO - Generating summary statistics for training data.
+2025-01-03 22:07:07,233 - INFO - Summary statistics for numerical data:
+2025-01-03 22:07:07,250 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-03 22:07:07,250 - INFO - Summary statistics for categorical data:
+2025-01-03 22:07:07,252 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-03 22:07:07,258 - INFO - Analyzing promotion effectiveness.
+2025-01-03 22:07:07,360 - INFO - Top stores for promo deployment:
+Promo            0             1       Uplift
+Store                                        
+271    3974.017241   9980.522796  6006.505555
+375    4862.379965  10785.871972  5923.492007
+552    4008.190722   9693.301538  5685.110817
+489    3791.017182   9388.880466  5597.863284
+999    5096.148532  10673.000000  5576.851468
+167    5165.088388  10729.513605  5564.425217
+545    6164.929188  11553.370968  5388.441779
+156    3661.760757   9048.324859  5386.564101
+894    4701.937608  10035.457576  5333.519967
+809    5303.867012  10619.202797  5315.335785
+2025-01-03 22:07:07,365 - INFO - Identifying stores open on all weekdays.
+2025-01-03 22:07:07,652 - INFO - Analyzing how assortment type affects sales.
+2025-01-03 22:07:07,839 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-03 22:14:05,139 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 22:14:06,807 - INFO - Starting data cleaning.
+2025-01-03 22:14:06,826 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 22:14:06,870 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 22:14:07,068 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 22:14:07,277 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 22:14:07,437 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 22:14:13,659 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-03 22:14:13,663 - INFO - Visualizing feature distributions.
+2025-01-03 22:14:18,094 - INFO - Sales distribution plotted.
+2025-01-03 22:14:22,122 - INFO - Customers distribution plotted.
+2025-01-03 22:14:22,122 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 22:14:22,158 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-03 22:14:22,158 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-03 22:14:22,461 - INFO - Plotted average sales by promo status.
+2025-01-03 22:14:22,898 - INFO - Plotted average customers by promo status.
+2025-01-03 22:14:22,899 - INFO - Exploring holiday effects on sales.
+2025-01-03 22:14:23,256 - INFO - Plotted average sales by state holiday.
+2025-01-03 22:14:23,256 - INFO - Exploring holiday effects on Customers.
+2025-01-03 22:14:23,652 - INFO - Plotted average Customers by state holiday.
+2025-01-03 22:14:23,652 - INFO - Checking correlations between numerical features. 
+2025-01-03 22:14:25,658 - INFO - Plotting correlation matrix done. 
+2025-01-03 22:14:25,663 - INFO - Generating summary statistics for training data.
+2025-01-03 22:14:26,892 - INFO - Summary statistics for numerical data:
+2025-01-03 22:14:26,900 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-03 22:14:26,900 - INFO - Summary statistics for categorical data:
+2025-01-03 22:14:26,901 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-03 22:14:26,909 - INFO - Analyzing promotion effectiveness.
+2025-01-03 22:14:26,970 - INFO - Top stores for promo deployment:
+Promo            0             1       Uplift
+Store                                        
+271    3974.017241   9980.522796  6006.505555
+375    4862.379965  10785.871972  5923.492007
+552    4008.190722   9693.301538  5685.110817
+489    3791.017182   9388.880466  5597.863284
+999    5096.148532  10673.000000  5576.851468
+167    5165.088388  10729.513605  5564.425217
+545    6164.929188  11553.370968  5388.441779
+156    3661.760757   9048.324859  5386.564101
+894    4701.937608  10035.457576  5333.519967
+809    5303.867012  10619.202797  5315.335785
+2025-01-03 22:14:26,972 - INFO - Identifying stores open on all weekdays.
+2025-01-03 22:14:27,255 - INFO - Analyzing how assortment type affects sales.
+2025-01-03 22:14:27,470 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-03 22:14:27,713 - INFO - Analyzing new competitor impact on sales.
+2025-01-03 22:14:28,058 - INFO - Average sales before competitor data: nan
+2025-01-03 22:14:28,058 - INFO - Average sales after competitor data: 5321.005262069232
+2025-01-03 22:16:44,229 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 22:16:46,500 - INFO - Starting data cleaning.
+2025-01-03 22:16:46,515 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 22:16:46,570 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 22:16:46,766 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 22:16:46,960 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 22:16:47,131 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 22:16:52,417 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-03 22:16:52,424 - INFO - Visualizing feature distributions.
+2025-01-03 22:16:55,981 - INFO - Sales distribution plotted.
+2025-01-03 22:17:00,721 - INFO - Customers distribution plotted.
+2025-01-03 22:17:00,722 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 22:17:00,787 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-03 22:17:00,787 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-03 22:17:01,297 - INFO - Plotted average sales by promo status.
+2025-01-03 22:17:01,854 - INFO - Plotted average customers by promo status.
+2025-01-03 22:17:01,854 - INFO - Exploring holiday effects on sales.
+2025-01-03 22:17:02,303 - INFO - Plotted average sales by state holiday.
+2025-01-03 22:17:02,304 - INFO - Exploring holiday effects on Customers.
+2025-01-03 22:17:02,712 - INFO - Plotted average Customers by state holiday.
+2025-01-03 22:17:02,713 - INFO - Checking correlations between numerical features. 
+2025-01-03 22:17:04,071 - INFO - Plotting correlation matrix done. 
+2025-01-03 22:17:04,072 - INFO - Generating summary statistics for training data.
+2025-01-03 22:17:04,901 - INFO - Summary statistics for numerical data:
+2025-01-03 22:17:04,906 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-03 22:17:04,906 - INFO - Summary statistics for categorical data:
+2025-01-03 22:17:04,907 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-03 22:17:04,913 - INFO - Analyzing promotion effectiveness.
+2025-01-03 22:17:04,964 - INFO - Top stores for promo deployment:
+Promo            0             1       Uplift
+Store                                        
+271    3974.017241   9980.522796  6006.505555
+375    4862.379965  10785.871972  5923.492007
+552    4008.190722   9693.301538  5685.110817
+489    3791.017182   9388.880466  5597.863284
+999    5096.148532  10673.000000  5576.851468
+167    5165.088388  10729.513605  5564.425217
+545    6164.929188  11553.370968  5388.441779
+156    3661.760757   9048.324859  5386.564101
+894    4701.937608  10035.457576  5333.519967
+809    5303.867012  10619.202797  5315.335785
+2025-01-03 22:17:04,966 - INFO - Identifying stores open on all weekdays.
+2025-01-03 22:17:05,222 - INFO - Analyzing how assortment type affects sales.
+2025-01-03 22:17:05,397 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-03 22:17:05,591 - INFO - Analyzing new competitor impact on sales.
+2025-01-03 22:17:05,794 - INFO - Average sales before competitor data: nan
+2025-01-03 22:17:05,794 - INFO - Average sales after competitor data: 5321.005262069232
