@@ -12,3 +12,27 @@
 2025-01-03 16:28:50,628 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
 2025-01-03 16:28:50,640 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
 2025-01-03 16:28:58,847 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 17:28:31,614 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 17:28:33,941 - INFO - Starting data cleaning.
+2025-01-03 17:28:33,999 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 17:28:34,072 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 17:28:34,075 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 17:28:34,078 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 17:28:34,086 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 17:28:41,436 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 17:36:27,458 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 17:36:29,155 - INFO - Starting data cleaning.
+2025-01-03 17:36:29,178 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 17:36:29,233 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 17:36:29,234 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 17:36:29,236 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 17:36:29,244 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 17:36:35,368 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 17:43:33,127 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 17:43:37,213 - INFO - Starting data cleaning.
+2025-01-03 17:43:37,253 - INFO - Filled missing 'CompetitionDistance' in train_data.
+2025-01-03 17:43:37,320 - INFO - Filled missing 'PromoInterval' in train_data.
+2025-01-03 17:43:37,322 - INFO - Filled missing 'CompetitionDistance' in store_data.
+2025-01-03 17:43:37,324 - INFO - Filled missing 'PromoInterval' in store_data.
+2025-01-03 17:43:37,330 - INFO - Outliers removed from column 'CompetitionDistance' in store_data. Total removed: 3792
+2025-01-03 17:43:43,177 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.

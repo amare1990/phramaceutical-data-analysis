@@ -52,10 +52,10 @@ class CustomerBehaviourEDA:
             raise ValueError("Datasets are not loaded. Call the `load_data` method first.")
 
         # Merge store with train
-        self.merged_train_data = pd.merge(self.train_data, self.store_data, on='Store', how='left')
+        self.merged_train_data = pd.merge(self.train_data, self.store_data, on='Store', how='inner')
 
         # Merge store with test
-        self.merged_test_data = pd.merge(self.test_data, self.store_data, on='Store', how='left')
+        self.merged_test_data = pd.merge(self.test_data, self.store_data, on='Store', how='inner')
 
   def get_merged_data(self):
         """
@@ -74,22 +74,22 @@ class CustomerBehaviourEDA:
     self.merged_train_data, self.merged_test_data = self.get_merged_data()
 
     # Detect and fix mixed data types for all columns in train_data and store_data
-    for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
-        for col in dataset.columns:
-            unique_types = set(type(val) for val in dataset[col].dropna())
-            if len(unique_types) > 1:
-                logging.warning(f"Column '{col}' in {dataset_name} has mixed data types: {unique_types}. Analyzing suitable type.")
-                # Determine appropriate type: prefer numeric if possible, otherwise string
-                try:
-                    dataset[col] = pd.to_numeric(dataset[col], errors='coerce')
-                    if dataset[col].isnull().sum() == 0:  # Conversion successful without data loss
-                        logging.info(f"Column '{col}' in {dataset_name} converted to numeric.")
-                    else:
-                        dataset[col] = dataset[col].astype(str)
-                        logging.info(f"Column '{col}' in {dataset_name} converted to string due to data loss.")
-                except Exception:
-                    dataset[col] = dataset[col].astype(str)
-                    logging.info(f"Column '{col}' in {dataset_name} converted to string.")
+    # for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
+    #     for col in dataset.columns:
+    #         unique_types = set(type(val) for val in dataset[col].dropna())
+    #         if len(unique_types) > 1:
+    #             logging.warning(f"Column '{col}' in {dataset_name} has mixed data types: {unique_types}. Analyzing suitable type.")
+    #             # Determine appropriate type: prefer numeric if possible, otherwise string
+    #             try:
+    #                 dataset[col] = pd.to_numeric(dataset[col], errors='coerce')
+    #                 if dataset[col].isnull().sum() == 0:  # Conversion successful without data loss
+    #                     logging.info(f"Column '{col}' in {dataset_name} converted to numeric.")
+    #                 else:
+    #                     dataset[col] = dataset[col].astype(str)
+    #                     logging.info(f"Column '{col}' in {dataset_name} converted to string due to data loss.")
+    #             except Exception:
+    #                 dataset[col] = dataset[col].astype(str)
+    #                 logging.info(f"Column '{col}' in {dataset_name} converted to string.")
 
     # Fill missing values in train_data and store_data
     for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
