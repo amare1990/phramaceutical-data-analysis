@@ -174,7 +174,21 @@ class CustomerBehaviourEDA:
     plt.show()
     logging.info("Plotted average customers by promo status.")
 
+  def explore_holiday_effects(self):
+        """Analyze sales behavior around holidays."""
+        logging.info("Exploring holiday effects on sales.")
 
+        holiday_sales = self.train_data.groupby('StateHoliday')['Sales'].mean()
+
+        holiday_sales.plot(kind='bar', title='Average Sales by State Holiday', color=['blue', 'green', 'red', 'orange'])
+        plt.show()
+        logging.info("Plotted average sales by state holiday.")
+
+        logging.info("Exploring holiday effects on Customers.")
+        holiday_customers = self.train_data.groupby('StateHoliday')['Customers'].mean()
+        holiday_customers.plot(kind='bar', title='Average Customers by State Holiday', color=['blue', 'green', 'red', 'orange'])
+        plt.show()
+        logging.info("Plotted average Customers by state holiday.")
 
 
 

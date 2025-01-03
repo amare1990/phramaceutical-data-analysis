@@ -85,3 +85,32 @@
 2025-01-03 19:47:46,660 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
 2025-01-03 19:47:46,848 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
 2025-01-03 19:47:47,000 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:47:52,184 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:47:53,836 - INFO - Visualizing feature distributions.
+2025-01-03 19:47:57,790 - INFO - Sales distribution plotted.
+2025-01-03 19:48:01,654 - INFO - Customers distribution plotted.
+2025-01-03 19:48:01,660 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 19:48:01,708 - INFO - Average sales with promo: 7991.15, without promo: 4406.05.
+2025-01-03 19:48:01,708 - INFO - Average customers with promo: 820.10, without promo: 517.82.
+2025-01-03 19:48:01,938 - INFO - Plotted average sales by promo status.
+2025-01-03 19:48:02,207 - INFO - Plotted average customers by promo status.
+2025-01-03 19:55:03,147 - INFO - CustomerBehaviorEDA instance created.
+2025-01-03 19:55:07,328 - INFO - Starting data cleaning.
+2025-01-03 19:55:07,343 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-03 19:55:07,390 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-03 19:55:07,556 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-03 19:55:07,815 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-03 19:55:07,973 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-03 19:55:13,189 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv and ../data/test_cleaned_data.csv.
+2025-01-03 19:55:14,032 - INFO - Visualizing feature distributions.
+2025-01-03 19:55:18,015 - INFO - Sales distribution plotted.
+2025-01-03 19:55:22,359 - INFO - Customers distribution plotted.
+2025-01-03 19:55:22,365 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-03 19:55:22,401 - INFO - Average sales with promo: 7991.15, without promo: 4406.05.
+2025-01-03 19:55:22,401 - INFO - Average customers with promo: 820.10, without promo: 517.82.
+2025-01-03 19:55:22,599 - INFO - Plotted average sales by promo status.
+2025-01-03 19:55:22,812 - INFO - Plotted average customers by promo status.
+2025-01-03 19:55:22,818 - INFO - Exploring holiday effects on sales.
+2025-01-03 19:55:23,035 - INFO - Plotted average sales by state holiday.
+2025-01-03 19:55:23,035 - INFO - Exploring holiday effects on Customers.
+2025-01-03 19:55:23,259 - INFO - Plotted average Customers by state holiday.
