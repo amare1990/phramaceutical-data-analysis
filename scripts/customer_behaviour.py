@@ -35,12 +35,12 @@ class CustomerBehaviourEDA:
 
 
 
-  def save_data(self, saving_data_path, index=False):
-      """
+  # def save_data(self, saving_data_path, index=False):
+  #    """
 
-      Save dataset into the provided path
-      """
-      pd.to_csv(saving_data_path)
+  #   Save dataset into the provided path
+  #   """
+  #    pd.to_csv(saving_data_path)
 
 
   def merge_datasets(self):
@@ -120,8 +120,8 @@ class CustomerBehaviourEDA:
             logging.info(f"Outliers removed from column '{col}' in train_data. Total removed: {len(outliers)}")
 
     # Save the cleaned data, i.e., the train data
-    # self.train_data.to_csv(train_cleaned_path, index=False)
-    self.save_data(train_cleaned_path, index=False)
+    self.train_data.to_csv(train_cleaned_path, index=False)
+    # self.save_data(train_cleaned_path, index=False)
     # self.test_data.to_csv(test_cleaned_path, index=False)
     logging.info(f"Cleaned data saved to {train_cleaned_path}.")
 
@@ -255,9 +255,9 @@ class CustomerBehaviourEDA:
     logging.info("Summary statistics for categorical data:")
     logging.info(f"\n{cat_summary}")
 
-    print("Numerical Summary:")
+    print("Numerical Summary:\n")
     print(num_summary)
-    print("\nCategorical Summary:")
+    print("\nCategorical Summary:\n")
     print(cat_summary)
 
 
