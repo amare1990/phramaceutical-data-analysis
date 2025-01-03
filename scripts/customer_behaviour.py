@@ -35,7 +35,7 @@ class CustomerBehaviourEDA:
 
 
 
-  def save_data(self, saving_data_path):
+  def save_data(self, saving_data_path, index=False):
       """
 
       Save dataset into the provided path
@@ -120,7 +120,8 @@ class CustomerBehaviourEDA:
             logging.info(f"Outliers removed from column '{col}' in train_data. Total removed: {len(outliers)}")
 
     # Save the cleaned data, i.e., the train data
-    self.train_data.to_csv(train_cleaned_path, index=False)
+    # self.train_data.to_csv(train_cleaned_path, index=False)
+    self.save_data(train_cleaned_path, index=False)
     # self.test_data.to_csv(test_cleaned_path, index=False)
     logging.info(f"Cleaned data saved to {train_cleaned_path}.")
 
@@ -369,47 +370,5 @@ class CustomerBehaviourEDA:
     plt.show()
 
 
-
-
-  def analyze_new_competitor_effect(self):
-    """
-    Analyze the effect of new competitors opening or reopening on stores.
-    Focuses on stores with NA as CompetitionDistance that later have values.
-    """
-    logging.info("Analyzing the effect of new competitors opening or reopening.")
-
-    # Identify stores with missing CompetitionDistance initially
-    stores_with_na = self.train_data[self.train_data['CompetitionDistance'].isna()]['Store'].unique()
-
-    # Filter data for these stores
-    na_data = self.train_data[self.train_data['Store'].isin(stores_with_na)]
-
-    # Separate data into before and after competitor information is available
-    na_before = na_data[na_data['CompetitionDistance'].isna()]
-    na_after = na_data[~na_data['CompetitionDistance'].isna()]
-
-    # Group by store and calculate average sales before and after
-    avg_sales_before = na_before.groupby('Store')['Sales'].mean()
-    avg_sales_after = na_after.groupby('Store')['Sales'].mean()
-
-    # Merge the data for comparison
-    sales_comparison = pd.DataFrame({
-        'Before': avg_sales_before,
-        'After': avg_sales_after
-    }).dropna()
-
-    # Add a column to calculate the sales difference
-    sales_comparison['Difference'] = sales_comparison['After'] - sales_comparison['Before']
-
-    # Output the result
-    logging.info(f"Sales comparison before and after competitor information:\n{sales_comparison}")
-    print(sales_comparison)
-
-    # Plot the differences
-    sales_comparison['Difference'].plot(kind='bar', figsize=(12, 6), title='Sales Difference Before and After Competitor Opening')
-    plt.axhline(0, color='red', linestyle='--', linewidth=1)
-    plt.ylabel('Sales Difference')
-    plt.xlabel('Store')
-    plt.show()
 
 
