@@ -130,12 +130,20 @@ class CustomerBehaviourEDA:
         sns.histplot(self.train_data['Sales'], kde=True, bins=30)
         plt.title('Sales Distribution')
         plt.show()
+        plt.savefig(
+                f"plots/sales_distribution.png",
+                dpi=300,
+                bbox_inches='tight')
         logging.info("Sales distribution plotted.")
 
         plt.figure(figsize=(10, 5))
         sns.histplot(self.train_data['Customers'], kde=True, bins=30)
         plt.title('Customers Distribution')
         plt.show()
+        plt.savefig(
+                f"plots/customers_distribution.png",
+                dpi=300,
+                bbox_inches='tight')
         logging.info("Customers distribution plotted.")
 
   def analyze_promotions(self):
@@ -160,6 +168,10 @@ class CustomerBehaviourEDA:
     for i, v in enumerate(promo_sales):
         plt.text(i, v + 0.02 * max(promo_sales), f"{v:.1f}", ha='center', fontsize=10)
     plt.show()
+    plt.savefig(
+                f"plots/average_sales_per_promo.png",
+                dpi=300,
+                bbox_inches='tight')
     logging.info("Plotted average sales by promo status.")
 
     # Plot average customers by promo status
@@ -172,6 +184,10 @@ class CustomerBehaviourEDA:
     for i, v in enumerate(promo_customers):
         plt.text(i, v + 0.02 * max(promo_customers), f"{v:.1f}", ha='center', fontsize=10)
     plt.show()
+    plt.savefig(
+                f"plots/average customers per promo.png",
+                dpi=300,
+                bbox_inches='tight')
     logging.info("Plotted average customers by promo status.")
 
   def explore_holiday_effects(self):
@@ -182,12 +198,20 @@ class CustomerBehaviourEDA:
 
         holiday_sales.plot(kind='bar', title='Average Sales by State Holiday', color=['blue', 'green', 'red', 'orange'])
         plt.show()
+        plt.savefig(
+                f"plots/average sales by StateHoliday.png",
+                dpi=300,
+                bbox_inches='tight')
         logging.info("Plotted average sales by state holiday.")
 
         logging.info("Exploring holiday effects on Customers.")
         holiday_customers = self.train_data.groupby('StateHoliday')['Customers'].mean()
         holiday_customers.plot(kind='bar', title='Average Customers by State Holiday', color=['blue', 'green', 'red', 'orange'])
         plt.show()
+        plt.savefig(
+                f"plots/average customers by StateHoliday.png",
+                dpi=300,
+                bbox_inches='tight')
         logging.info("Plotted average Customers by state holiday.")
 
 
@@ -203,8 +227,12 @@ class CustomerBehaviourEDA:
 
       plt.figure(figsize=(12, 8))
       sns.heatmap(correlations, annot=True, cmap='coolwarm', fmt='.2f')
-      plt.title("Feature orrelation Matrix")
+      plt.title("Feature Correlation Matrix")
       plt.show()
+      plt.savefig(
+                f"plots/feature correlation matrix.png",
+                dpi=300,
+                bbox_inches='tight')
       logging.info("Plotting correlation matrix done. ")
 
   def generate_summary(self):
