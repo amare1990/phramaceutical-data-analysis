@@ -75,7 +75,7 @@ def customer_behaviour_analysis_pipline_processor():
 
   print("\n\n************************************************************************************")
   print("Trends of customer behavior during store opening and closing times\n")
-  customer_eda.analyze_customer_behavior_opening_hours
+  customer_eda.analyze_customer_behavior_opening_hours()
 
   print("\n\n************************************************************************************")
   print("Stores that are open in weekdayas and the effect of this over sales\n")

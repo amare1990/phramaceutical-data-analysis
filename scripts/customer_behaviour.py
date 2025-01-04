@@ -133,21 +133,21 @@ class CustomerBehaviourEDA:
         plt.figure(figsize=(10, 5))
         sns.histplot(self.train_data['Sales'], kde=True, bins=30)
         plt.title('Sales Distribution')
-        plt.show()
         plt.savefig(
                 f"plots/sales_distribution.png",
                 dpi=300,
                 bbox_inches='tight')
+        plt.show()
         logging.info("Sales distribution plotted.")
 
         plt.figure(figsize=(10, 5))
         sns.histplot(self.train_data['Customers'], kde=True, bins=30)
         plt.title('Customers Distribution')
-        plt.show()
         plt.savefig(
                 f"plots/customers_distribution.png",
                 dpi=300,
                 bbox_inches='tight')
+        plt.show()
         logging.info("Customers distribution plotted.")
 
   def analyze_promotions(self):
@@ -171,11 +171,11 @@ class CustomerBehaviourEDA:
     plt.xticks(rotation=0)
     for i, v in enumerate(promo_sales):
         plt.text(i, v + 0.02 * max(promo_sales), f"{v:.1f}", ha='center', fontsize=10)
-    plt.show()
     plt.savefig(
                 f"plots/average_sales_per_promo.png",
                 dpi=300,
                 bbox_inches='tight')
+    plt.show()
     logging.info("Plotted average sales by promo status.")
 
     # Plot average customers by promo status
@@ -187,11 +187,11 @@ class CustomerBehaviourEDA:
     plt.xticks(rotation=0)
     for i, v in enumerate(promo_customers):
         plt.text(i, v + 0.02 * max(promo_customers), f"{v:.1f}", ha='center', fontsize=10)
-    plt.show()
     plt.savefig(
                 f"plots/average customers per promo.png",
                 dpi=300,
                 bbox_inches='tight')
+    plt.show()
     logging.info("Plotted average customers by promo status.")
 
   def explore_holiday_effects(self):
@@ -201,21 +201,21 @@ class CustomerBehaviourEDA:
         holiday_sales = self.train_data.groupby('StateHoliday')['Sales'].mean()
 
         holiday_sales.plot(kind='bar', title='Average Sales by State Holiday', color=['blue', 'green', 'red', 'orange'])
-        plt.show()
         plt.savefig(
                 f"plots/average sales by StateHoliday.png",
                 dpi=300,
                 bbox_inches='tight')
+        plt.show()
         logging.info("Plotted average sales by state holiday.")
 
         logging.info("Exploring holiday effects on Customers.")
         holiday_customers = self.train_data.groupby('StateHoliday')['Customers'].mean()
         holiday_customers.plot(kind='bar', title='Average Customers by State Holiday', color=['blue', 'green', 'red', 'orange'])
-        plt.show()
         plt.savefig(
                 f"plots/average customers by StateHoliday.png",
                 dpi=300,
                 bbox_inches='tight')
+        plt.show()
         logging.info("Plotted average Customers by state holiday.")
 
 
@@ -232,11 +232,11 @@ class CustomerBehaviourEDA:
       plt.figure(figsize=(12, 8))
       sns.heatmap(correlations, annot=True, cmap='coolwarm', fmt='.2f')
       plt.title("Feature Correlation Matrix")
-      plt.show()
       plt.savefig(
                 f"plots/feature correlation matrix.png",
                 dpi=300,
                 bbox_inches='tight')
+      plt.show()
       logging.info("Plotting correlation matrix done. ")
 
   def statistical_summary(self):
@@ -265,16 +265,28 @@ class CustomerBehaviourEDA:
     """Analyze the effectiveness of promotions and recommend deployment strategies."""
     logging.info("Analyzing promotion effectiveness.")
 
-    # Group by Store and Promo to analyze average sales and customers
-    promo_effectiveness = self.train_data.groupby(['Store', 'Promo'])[['Sales', 'Customers']].mean().reset_index()
+    # Convert Promo column to integer
+    self.train_data['Promo'] = self.train_data['Promo'].astype(int)
 
-    # Identify stores with the highest sales uplift during promotions
-    promo_uplift = promo_effectiveness.pivot(index='Store', columns='Promo', values='Sales')
-    promo_uplift['Uplift'] = promo_uplift[1] - promo_uplift[0]
-    recommended_stores = promo_uplift.sort_values(by='Uplift', ascending=False).head(10)
+    try:
+        # Group by Store and Promo to analyze average sales and customers
+        promo_effectiveness = self.train_data.groupby(['Store', 'Promo'])[['Sales', 'Customers']].mean().reset_index()
 
-    logging.info(f"Top stores for promo deployment:\n{recommended_stores}")
-    print(f"Top stores for promo deployment:\n{recommended_stores}")
+        # Identify stores with the highest sales uplift during promotions
+        promo_uplift = promo_effectiveness.pivot(index='Store', columns='Promo', values='Sales')
+        promo_uplift['Uplift'] = promo_uplift[1].fillna(0) - promo_uplift[0].fillna(0)
+        recommended_stores = promo_uplift.sort_values(by='Uplift', ascending=False).head(10)
+
+        logging.info(f"Top 10 stores for promo deployment: {recommended_stores.index.tolist()}")
+        print(f"Top stores for promo deployment:\n{recommended_stores}")
+        return recommended_stores
+
+    except KeyError as e:
+        logging.error(f"Key error during analysis: {e}")
+        raise
+    except Exception as e:
+        logging.error(f"An unexpected error occurred: {e}")
+        raise
 
 
   def analyze_customer_behavior_opening_hours(self):
@@ -291,6 +303,10 @@ class CustomerBehaviourEDA:
     customer_trends.plot(kind='line', marker='o', title='Customer Behavior by Day of Week')
     plt.ylabel('Average Customers')
     plt.xlabel('Day of Week')
+    plt.savefig(
+                "plots/average_customer_behaviour_on_opening_hrs.png",
+                dpi=300,
+                bbox_inches='tight')
     plt.show()
     logging.info("Plotted customer behavior during store opening and closing times.")
 
@@ -309,7 +325,13 @@ class CustomerBehaviourEDA:
     # Compare sales on weekends
     weekend_sales = weekend_data.groupby('DayOfWeek')['Sales'].mean()
     weekend_sales.plot(kind='bar', title='Weekend Sales for Stores Open All Weekdays')
+
+    plt.xlabel('Stores open on all weekdays')
     plt.ylabel('Average Sales')
+    plt.savefig(
+                f"plots/Effect of weekday on store.png",
+                dpi=300,
+                bbox_inches='tight')
     plt.show()
 
   def analyze_assortment_impact(self):
@@ -322,6 +344,10 @@ class CustomerBehaviourEDA:
     # Plot results
     assortment_sales.plot(kind='bar', title='Average Sales by Assortment Type', color=['blue', 'orange', 'green'])
     plt.ylabel('Average Sales')
+    plt.savefig(
+                f"plots/Impact of assortment type on sales.png",
+                dpi=300,
+                bbox_inches='tight')
     plt.show()
 
   def analyze_competitor_distance_impact(self):
@@ -342,32 +368,58 @@ class CustomerBehaviourEDA:
     distance_impact.plot(kind='bar', title='Average Sales by Competitor Distance')
     plt.ylabel('Average Sales')
     plt.xlabel('Competitor Distance')
+    plt.savefig(
+                f"plots/Impact of competitor distance on sales.png",
+                dpi=300,
+                bbox_inches='tight')
     plt.show()
 
   def analyze_new_competitor_impact(self):
-    """Analyze the impact of new competitor openings on sales."""
-    logging.info("Analyzing new competitor impact on sales.")
+      """Analyze the impact of new competitor openings on sales using competition open dates."""
+      logging.info("Analyzing new competitor impact on sales with competition open dates.")
 
-    # Filter stores with missing competitor distance initially
-    na_comp_stores = self.train_data[self.train_data['CompetitionDistance'].isna()]
+      # Filter stores with competition data available
+      comp_data_available = self.train_data[
+          self.train_data['CompetitionOpenSinceMonth'].notna() &
+          self.train_data['CompetitionOpenSinceYear'].notna()
+      ]
 
-    # Later data where competitor distance becomes available
-    available_comp_stores = self.train_data[~self.train_data['CompetitionDistance'].isna()]
+      # Add a column for competition start date
+      comp_data_available['CompetitionStartDate'] = pd.to_datetime(
+          dict(
+              year=comp_data_available['CompetitionOpenSinceYear'],
+              month=comp_data_available['CompetitionOpenSinceMonth'],
+              day=1
+          )
+      )
 
-    # Compare average sales
-    avg_sales_na = na_comp_stores['Sales'].mean()
-    avg_sales_available = available_comp_stores['Sales'].mean()
+      # Compare sales before and after the competition start date
+      comp_data_available['CompetitionPeriod'] = np.where(
+          comp_data_available['Date'] < comp_data_available['CompetitionStartDate'],
+          'Before',
+          'After'
+      )
 
-    logging.info(f"Average sales before competitor data: {avg_sales_na}")
-    logging.info(f"Average sales after competitor data: {avg_sales_available}")
+      # Group by competition period and calculate average sales
+      sales_comparison = comp_data_available.groupby('CompetitionPeriod')['Sales'].mean()
+      logging.info(f"Average sales before competition: {sales_comparison['Before']}")
+      logging.info(f"Average sales after competition: {sales_comparison['After']}")
 
-    # Bar plot comparison
-    pd.DataFrame({
-        'Before': [avg_sales_na],
-        'After': [avg_sales_available]
-    }).plot(kind='bar', title='Impact of New Competitor on Sales', color=['red', 'green'])
-    plt.ylabel('Average Sales')
-    plt.show()
+      # Plot the comparison
+      sales_comparison.plot(kind='bar', color=['red', 'green'], alpha=0.7, title='Impact of New Competitor on Sales')
+      plt.ylabel('Average Sales')
+      plt.xlabel('Competition Period')
+      plt.xticks(rotation=0)
+      for i, v in enumerate(sales_comparison):
+          plt.text(i, v + 0.02 * max(sales_comparison), f"{v:.1f}", ha='center', fontsize=10)
+      plt.savefig(
+          "plots/Effect_of_new_competitor_with_dates.png",
+          dpi=300,
+          bbox_inches='tight'
+      )
+      plt.show()
+
+
 
 
 
