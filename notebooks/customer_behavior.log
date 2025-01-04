@@ -618,3 +618,402 @@ Store
 2025-01-03 22:17:05,591 - INFO - Analyzing new competitor impact on sales.
 2025-01-03 22:17:05,794 - INFO - Average sales before competitor data: nan
 2025-01-03 22:17:05,794 - INFO - Average sales after competitor data: 5321.005262069232
+2025-01-04 12:14:07,685 - INFO - CustomerBehaviorEDA instance created.
+2025-01-04 12:14:12,281 - INFO - Starting data cleaning.
+2025-01-04 12:14:12,549 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-04 12:14:12,605 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-04 12:14:13,171 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-04 12:14:13,441 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-04 12:14:13,598 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-04 12:14:20,504 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-04 12:14:20,511 - INFO - Visualizing feature distributions.
+2025-01-04 12:14:26,396 - INFO - Sales distribution plotted.
+2025-01-04 12:14:31,120 - INFO - Customers distribution plotted.
+2025-01-04 12:14:31,121 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-04 12:14:31,195 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-04 12:14:31,196 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-04 12:14:32,087 - INFO - Plotted average sales by promo status.
+2025-01-04 12:14:32,717 - INFO - Plotted average customers by promo status.
+2025-01-04 12:14:32,717 - INFO - Exploring holiday effects on sales.
+2025-01-04 12:14:33,233 - INFO - Plotted average sales by state holiday.
+2025-01-04 12:14:33,233 - INFO - Exploring holiday effects on Customers.
+2025-01-04 12:14:33,767 - INFO - Plotted average Customers by state holiday.
+2025-01-04 12:14:33,767 - INFO - Checking correlations between numerical features. 
+2025-01-04 12:14:37,119 - INFO - Plotting correlation matrix done. 
+2025-01-04 12:14:37,127 - INFO - Generating summary statistics for training data.
+2025-01-04 12:14:38,153 - INFO - Summary statistics for numerical data:
+2025-01-04 12:14:38,172 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-04 12:14:38,172 - INFO - Summary statistics for categorical data:
+2025-01-04 12:14:38,174 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-04 12:14:38,182 - INFO - Analyzing promotion effectiveness.
+2025-01-04 12:14:38,295 - INFO - Top 10 stores for promo deployment: [271, 375, 552, 489, 999, 167, 545, 156, 894, 809]
+2025-01-04 12:14:38,297 - INFO - Identifying stores open on all weekdays.
+2025-01-04 12:14:38,880 - INFO - Analyzing how assortment type affects sales.
+2025-01-04 12:14:39,384 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-04 12:14:39,897 - INFO - Analyzing new competitor impact on sales.
+2025-01-04 12:14:40,242 - INFO - Average sales before competitor data: nan
+2025-01-04 12:14:40,242 - INFO - Average sales after competitor data: 5321.005262069232
+2025-01-04 13:36:18,612 - INFO - CustomerBehaviorEDA instance created.
+2025-01-04 13:36:21,696 - INFO - Starting data cleaning.
+2025-01-04 13:36:21,779 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-04 13:36:21,840 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-04 13:36:22,041 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-04 13:36:22,801 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-04 13:36:22,955 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-04 13:36:29,527 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-04 13:36:29,533 - INFO - Visualizing feature distributions.
+2025-01-04 13:36:34,165 - INFO - Sales distribution plotted.
+2025-01-04 13:36:37,857 - INFO - Customers distribution plotted.
+2025-01-04 13:36:37,857 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-04 13:36:37,887 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-04 13:36:37,887 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-04 13:36:38,515 - INFO - Plotted average sales by promo status.
+2025-01-04 13:36:39,021 - INFO - Plotted average customers by promo status.
+2025-01-04 13:36:39,021 - INFO - Exploring holiday effects on sales.
+2025-01-04 13:36:39,594 - INFO - Plotted average sales by state holiday.
+2025-01-04 13:36:39,594 - INFO - Exploring holiday effects on Customers.
+2025-01-04 13:36:40,037 - INFO - Plotted average Customers by state holiday.
+2025-01-04 13:36:40,037 - INFO - Checking correlations between numerical features. 
+2025-01-04 13:36:42,707 - INFO - Plotting correlation matrix done. 
+2025-01-04 13:36:42,716 - INFO - Generating summary statistics for training data.
+2025-01-04 13:36:44,309 - INFO - Summary statistics for numerical data:
+2025-01-04 13:36:44,331 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-04 13:36:44,331 - INFO - Summary statistics for categorical data:
+2025-01-04 13:36:44,334 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-04 13:36:44,349 - INFO - Analyzing promotion effectiveness.
+2025-01-04 13:36:44,465 - INFO - Top 10 stores for promo deployment: [271, 375, 552, 489, 999, 167, 545, 156, 894, 809]
+2025-01-04 13:36:44,469 - INFO - Identifying stores open on all weekdays.
+2025-01-04 13:36:45,118 - INFO - Analyzing how assortment type affects sales.
+2025-01-04 13:36:45,652 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-04 13:36:46,147 - INFO - Analyzing new competitor impact on sales.
+2025-01-04 13:36:46,473 - INFO - Average sales before competitor data: nan
+2025-01-04 13:36:46,473 - INFO - Average sales after competitor data: 5321.005262069232
+2025-01-04 13:42:17,172 - INFO - CustomerBehaviorEDA instance created.
+2025-01-04 13:42:18,688 - INFO - Starting data cleaning.
+2025-01-04 13:42:18,701 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-04 13:42:18,743 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-04 13:42:18,904 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-04 13:42:19,088 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-04 13:42:19,236 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-04 13:42:24,836 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-04 13:42:24,841 - INFO - Visualizing feature distributions.
+2025-01-04 13:42:28,964 - INFO - Sales distribution plotted.
+2025-01-04 13:42:33,175 - INFO - Customers distribution plotted.
+2025-01-04 13:42:33,176 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-04 13:42:33,207 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-04 13:42:33,207 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-04 13:42:33,714 - INFO - Plotted average sales by promo status.
+2025-01-04 13:42:34,337 - INFO - Plotted average customers by promo status.
+2025-01-04 13:42:34,337 - INFO - Exploring holiday effects on sales.
+2025-01-04 13:42:34,837 - INFO - Plotted average sales by state holiday.
+2025-01-04 13:42:34,837 - INFO - Exploring holiday effects on Customers.
+2025-01-04 13:42:35,344 - INFO - Plotted average Customers by state holiday.
+2025-01-04 13:42:35,344 - INFO - Checking correlations between numerical features. 
+2025-01-04 13:42:37,606 - INFO - Plotting correlation matrix done. 
+2025-01-04 13:42:37,608 - INFO - Generating summary statistics for training data.
+2025-01-04 13:42:38,702 - INFO - Summary statistics for numerical data:
+2025-01-04 13:42:38,711 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-04 13:42:38,711 - INFO - Summary statistics for categorical data:
+2025-01-04 13:42:38,715 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-04 13:42:38,725 - INFO - Analyzing promotion effectiveness.
+2025-01-04 13:42:38,808 - INFO - Top 10 stores for promo deployment: [271, 375, 552, 489, 999, 167, 545, 156, 894, 809]
+2025-01-04 13:42:38,810 - INFO - Identifying stores open on all weekdays.
+2025-01-04 13:42:39,555 - INFO - Analyzing how assortment type affects sales.
+2025-01-04 13:42:40,054 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-04 13:42:40,671 - INFO - Analyzing new competitor impact on sales.
+2025-01-04 13:42:40,986 - INFO - Average sales before competitor data: nan
+2025-01-04 13:42:40,986 - INFO - Average sales after competitor data: 5321.005262069232
+2025-01-04 13:52:59,919 - INFO - CustomerBehaviorEDA instance created.
+2025-01-04 13:53:01,088 - INFO - Starting data cleaning.
+2025-01-04 13:53:01,101 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-04 13:53:01,158 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-04 13:53:01,340 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-04 13:53:01,510 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-04 13:53:01,666 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-04 13:53:08,354 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-04 13:53:08,357 - INFO - Visualizing feature distributions.
+2025-01-04 13:53:12,925 - INFO - Sales distribution plotted.
+2025-01-04 13:53:17,915 - INFO - Customers distribution plotted.
+2025-01-04 13:53:17,915 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-04 13:53:17,958 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-04 13:53:17,958 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-04 13:53:18,714 - INFO - Plotted average sales by promo status.
+2025-01-04 13:53:19,515 - INFO - Plotted average customers by promo status.
+2025-01-04 13:53:19,515 - INFO - Exploring holiday effects on sales.
+2025-01-04 13:53:20,214 - INFO - Plotted average sales by state holiday.
+2025-01-04 13:53:20,214 - INFO - Exploring holiday effects on Customers.
+2025-01-04 13:53:20,784 - INFO - Plotted average Customers by state holiday.
+2025-01-04 13:53:20,784 - INFO - Checking correlations between numerical features. 
+2025-01-04 13:53:23,336 - INFO - Plotting correlation matrix done. 
+2025-01-04 13:53:23,338 - INFO - Generating summary statistics for training data.
+2025-01-04 13:53:24,486 - INFO - Summary statistics for numerical data:
+2025-01-04 13:53:24,491 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-04 13:53:24,492 - INFO - Summary statistics for categorical data:
+2025-01-04 13:53:24,493 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-04 13:53:24,501 - INFO - Analyzing promotion effectiveness.
+2025-01-04 13:53:24,559 - INFO - Top 10 stores for promo deployment: [271, 375, 552, 489, 999, 167, 545, 156, 894, 809]
+2025-01-04 13:53:24,561 - INFO - Analyzing customer behavior during store opening and closing times.
+2025-01-04 13:53:25,289 - INFO - Plotted customer behavior during store opening and closing times.
+2025-01-04 13:53:25,297 - INFO - Identifying stores open on all weekdays.
+2025-01-04 13:53:25,857 - INFO - Analyzing how assortment type affects sales.
+2025-01-04 13:53:26,253 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-04 13:53:26,790 - INFO - Analyzing new competitor impact on sales.
+2025-01-04 13:53:26,984 - INFO - Average sales before competitor data: nan
+2025-01-04 13:53:26,984 - INFO - Average sales after competitor data: 5321.005262069232
+2025-01-04 14:19:11,633 - INFO - CustomerBehaviorEDA instance created.
+2025-01-04 14:19:12,869 - INFO - Starting data cleaning.
+2025-01-04 14:19:12,883 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-04 14:19:12,929 - INFO - Filled missing 'PromoInterval' in train data.
+2025-01-04 14:19:13,119 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-04 14:19:13,310 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-04 14:19:13,458 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-04 14:19:19,431 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-04 14:19:19,437 - INFO - Visualizing feature distributions.
+2025-01-04 14:19:23,603 - INFO - Sales distribution plotted.
+2025-01-04 14:19:27,559 - INFO - Customers distribution plotted.
+2025-01-04 14:19:27,559 - INFO - Analyzing promotion effects on sales and customers.
+2025-01-04 14:19:27,597 - INFO - Average sales with promo: 7371.31, without promo: 4113.64.
+2025-01-04 14:19:27,597 - INFO - Average customers with promo: 740.05, without promo: 470.62.
+2025-01-04 14:19:28,138 - INFO - Plotted average sales by promo status.
+2025-01-04 14:19:28,652 - INFO - Plotted average customers by promo status.
+2025-01-04 14:19:28,652 - INFO - Exploring holiday effects on sales.
+2025-01-04 14:19:29,143 - INFO - Plotted average sales by state holiday.
+2025-01-04 14:19:29,143 - INFO - Exploring holiday effects on Customers.
+2025-01-04 14:19:29,535 - INFO - Plotted average Customers by state holiday.
+2025-01-04 14:19:29,536 - INFO - Checking correlations between numerical features. 
+2025-01-04 14:19:31,694 - INFO - Plotting correlation matrix done. 
+2025-01-04 14:19:31,696 - INFO - Generating summary statistics for training data.
+2025-01-04 14:19:32,563 - INFO - Summary statistics for numerical data:
+2025-01-04 14:19:32,568 - INFO - 
+               Store      DayOfWeek          Sales      Customers  \
+count  879882.000000  879882.000000  879882.000000  879882.000000   
+mean      556.502470       4.038842    5321.005262     570.476584   
+std       324.538224       1.995744    3267.463225     349.850137   
+min         1.000000       1.000000       0.000000       0.000000   
+25%       275.000000       2.000000    3587.000000     391.000000   
+50%       554.000000       4.000000    5566.000000     592.000000   
+75%       843.000000       6.000000    7486.000000     799.000000   
+max      1115.000000       7.000000   14049.000000    1438.000000   
+
+                Open          Promo  SchoolHoliday  CompetitionDistance  \
+count  879882.000000  879882.000000  879882.000000         879882.00000   
+mean        0.820143       0.370622       0.177221           3641.04822   
+std         0.384069       0.482972       0.381856           3973.39783   
+min         0.000000       0.000000       0.000000             20.00000   
+25%         1.000000       0.000000       0.000000            660.00000   
+50%         1.000000       0.000000       0.000000           2140.00000   
+75%         1.000000       1.000000       0.000000           5080.00000   
+max         1.000000       1.000000       1.000000          16690.00000   
+
+       CompetitionOpenSinceMonth  CompetitionOpenSinceYear         Promo2  \
+count              597291.000000             597291.000000  879882.000000   
+mean                    7.294741               2008.636311       0.533015   
+std                     3.222025                  6.198643       0.498909   
+min                     1.000000               1900.000000       0.000000   
+25%                     4.000000               2006.000000       0.000000   
+50%                     8.000000               2009.000000       1.000000   
+75%                    10.000000               2012.000000       1.000000   
+max                    12.000000               2015.000000       1.000000   
+
+       Promo2SinceWeek  Promo2SinceYear  
+count    468990.000000    468990.000000  
+mean         23.218075      2011.787445  
+std          14.121246         1.638312  
+min           1.000000      2009.000000  
+25%          13.000000      2011.000000  
+50%          22.000000      2012.000000  
+75%          37.000000      2013.000000  
+max          50.000000      2015.000000  
+2025-01-04 14:19:32,568 - INFO - Summary statistics for categorical data:
+2025-01-04 14:19:32,569 - INFO - 
+              Date StateHoliday StoreType Assortment PromoInterval
+count       879882       879882    879882     879882        879882
+unique         942            4         4          3             4
+top     2013-12-24            0         a          a          None
+freq          1015       851884    472281     474976        410892
+2025-01-04 14:19:32,575 - INFO - Analyzing promotion effectiveness.
+2025-01-04 14:19:32,625 - INFO - Top 10 stores for promo deployment: [271, 375, 552, 489, 999, 167, 545, 156, 894, 809]
+2025-01-04 14:19:32,627 - INFO - Analyzing customer behavior during store opening and closing times.
+2025-01-04 14:19:33,117 - INFO - Plotted customer behavior during store opening and closing times.
+2025-01-04 14:19:33,129 - INFO - Identifying stores open on all weekdays.
+2025-01-04 14:19:33,584 - INFO - Analyzing how assortment type affects sales.
+2025-01-04 14:19:33,983 - INFO - Analyzing the impact of competitor distance on sales.
+2025-01-04 14:19:34,437 - INFO - Analyzing new competitor impact on sales with competition open dates.
+2025-01-04 14:19:35,110 - INFO - Average sales before competition: 5499.949352920602
+2025-01-04 14:19:35,110 - INFO - Average sales after competition: 5291.286396762365
