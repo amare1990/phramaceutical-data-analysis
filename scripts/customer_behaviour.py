@@ -98,9 +98,22 @@ class CustomerBehaviourEDA:
     # Fill missing values in train_data and store_data
     # for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
 
+
+    # Drop duplicates
+    self.train_data = self.train_data.drop_duplicates()
+    self.test_data = self.test_data.drop_duplicates()
+    logging.info(f"Dropped duplicate rows")
+
     # Calculate the percentage of missing values (NaN) and infinite values for each row train data
     threshold = 0.5  # 50% threshold
-    rows_to_drop = self.train_data.isna() | np.isinf(self.train_data) | self.train_data.isnull()
+    # Identify numeric columns in the dataset
+    numeric_columns = self.train_data.select_dtypes(include=[np.number]).columns
+
+    # Create a boolean DataFrame that marks NaN or infinite values
+    rows_to_drop = self.train_data.isna() | self.train_data.isnull()
+
+    # Handle infinite values only for numeric columns
+    rows_to_drop[numeric_columns] |= np.isinf(self.train_data[numeric_columns])
 
     # Calculate the percentage of NaN, inf, or null values in each row
     percentage_missing = rows_to_drop.sum(axis=1) / len(self.train_data.columns)
@@ -108,34 +121,51 @@ class CustomerBehaviourEDA:
     # Drop rows where the percentage of missing, inf, or null values is greater than 50%
     self.train_data = self.train_data[percentage_missing <= threshold]
 
-    # Optionally log the number of rows dropped
+    # Log the number of rows dropped
     logging.info(f"Dropped {len(rows_to_drop) - len(self.train_data)} train data rows with more than 50% missing, infinite, or null values.")
 
+     # Drop columns where the percentage of missing, inf, or null values in the train data is greater than the threshold
+    columns_to_drop = percentage_missing[percentage_missing > threshold].index
+    self.train_data = self.train_data.drop(columns=columns_to_drop)
+    logging.info(f"Dropped columns, {list(columns_to_drop)} for which the perecentage of invalid in the train is greater than 50%")
+
+
+    # *******************************Cleaning test data ***************************************************************
     # Calculate the percentage of missing values (NaN) and infinite values for each row test data
-    threshold = 0.5  # 50% threshold
-    rows_to_drop_test = self.test_data.isna() | np.isinf(self.test_data) | self.test_data.isnull()
+    # Identify numeric columns in the dataset
+    numeric_columns = self.test_data.select_dtypes(include=[np.number]).columns
+    # Create a boolean DataFrame that marks NaN or infinite values
+    rows_to_drop_test = self.test_data.isna() | self.test_data.isnull()
+
+    # Handle infinite values only for numeric columns
+    rows_to_drop_test[numeric_columns] |= np.isinf(self.test_data[numeric_columns])
 
     # Calculate the percentage of NaN, inf, or null values in each row
     percentage_missing = rows_to_drop_test.sum(axis=1) / len(self.test_data.columns)
 
     # Drop rows where the percentage of missing, inf, or null values is greater than 50%
     self.test_data = self.test_data[percentage_missing <= threshold]
-
-    # Optionally log the number of rows dropped
+    # Log the number of rows dropped
     logging.info(f"Dropped {len(rows_to_drop_test) - len(self.test_data)} test data rows with more than 50% missing, infinite, or null values.")
 
    # Drop columns where all values are NaN, inf, or null
-    data = data.dropna(axis=1, how='all')
+    self.train_data = self.train_data.dropna(axis=1, how='all')
+    self.test_data = self.test_data.dropna(axis=1, how='all')
     logging.info(f"Dropped columns where all values are NaN, inf, or null")
 
-    # Drop duplicates
-    data = data.drop_duplicates()
-    logging.info(f"Dropped duplicate rows")
+     # Drop columns where the percentage of missing, inf, or null values in the test is greater than the threshold
+    columns_to_drop = percentage_missing[percentage_missing > threshold].index
+    self.test_data = self.test_data.drop(columns=columns_to_drop)
+    logging.info(f"Dropped columns, {list(columns_to_drop)} for which the perecentage of invalid in the test is greater than 50%")
 
 
     # For Promo2 == 0, set Promo2SinceYear, Promo2SinceWeek, and PromoInterval to 0
     self.train_data.loc[self.train_data['Promo2'] == 0, ['Promo2SinceYear', 'Promo2SinceWeek', 'PromoInterval']] = 0
+     # Optionally log the imputation process for train data
+    logging.info(f"Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in train data.")
     self.test_data.loc[self.test_data['Promo2'] == 0, ['Promo2SinceYear', 'Promo2SinceWeek', 'PromoInterval']] = 0
+     # Optionally log the imputation process for train data
+    logging.info(f"Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in test data.")
 
     # Impute for Promo2 == 1
     self.train_data.loc[self.train_data['Promo2'] == 1, 'Promo2SinceYear'].fillna(self.train_data['Promo2SinceYear'].median(), inplace=True)
