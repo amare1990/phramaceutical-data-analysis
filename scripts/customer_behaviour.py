@@ -97,13 +97,96 @@ class CustomerBehaviourEDA:
 
     # Fill missing values in train_data and store_data
     # for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
+
+    # Calculate the percentage of missing values (NaN) and infinite values for each row train data
+    threshold = 0.5  # 50% threshold
+    rows_to_drop = self.train_data.isna() | np.isinf(self.train_data) | self.train_data.isnull()
+
+    # Calculate the percentage of NaN, inf, or null values in each row
+    percentage_missing = rows_to_drop.sum(axis=1) / len(self.train_data.columns)
+
+    # Drop rows where the percentage of missing, inf, or null values is greater than 50%
+    self.train_data = self.train_data[percentage_missing <= threshold]
+
+    # Optionally log the number of rows dropped
+    logging.info(f"Dropped {len(rows_to_drop) - len(self.train_data)} train data rows with more than 50% missing, infinite, or null values.")
+
+    # Calculate the percentage of missing values (NaN) and infinite values for each row test data
+    threshold = 0.5  # 50% threshold
+    rows_to_drop_test = self.test_data.isna() | np.isinf(self.test_data) | self.test_data.isnull()
+
+    # Calculate the percentage of NaN, inf, or null values in each row
+    percentage_missing = rows_to_drop_test.sum(axis=1) / len(self.test_data.columns)
+
+    # Drop rows where the percentage of missing, inf, or null values is greater than 50%
+    self.test_data = self.test_data[percentage_missing <= threshold]
+
+    # Optionally log the number of rows dropped
+    logging.info(f"Dropped {len(rows_to_drop_test) - len(self.test_data)} test data rows with more than 50% missing, infinite, or null values.")
+
+   # Drop columns where all values are NaN, inf, or null
+    data = data.dropna(axis=1, how='all')
+    logging.info(f"Dropped columns where all values are NaN, inf, or null")
+
+    # Drop duplicates
+    data = data.drop_duplicates()
+    logging.info(f"Dropped duplicate rows")
+
+
+    # For Promo2 == 0, set Promo2SinceYear, Promo2SinceWeek, and PromoInterval to 0
+    self.train_data.loc[self.train_data['Promo2'] == 0, ['Promo2SinceYear', 'Promo2SinceWeek', 'PromoInterval']] = 0
+    self.test_data.loc[self.test_data['Promo2'] == 0, ['Promo2SinceYear', 'Promo2SinceWeek', 'PromoInterval']] = 0
+
+    # Impute for Promo2 == 1
+    self.train_data.loc[self.train_data['Promo2'] == 1, 'Promo2SinceYear'].fillna(self.train_data['Promo2SinceYear'].median(), inplace=True)
+    self.train_data.loc[self.train_data['Promo2'] == 1, 'Promo2SinceWeek'].fillna(self.train_data['Promo2SinceWeek'].mode()[0], inplace=True)
+    self.train_data.loc[self.train_data['Promo2'] == 1, 'PromoInterval'].fillna(self.train_data['PromoInterval'].mode()[0], inplace=True)
+
+    # Optionally log the imputation process for train data
+    logging.info(f"Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.")
+
+    # Repeat the process for the test data
+    self.test_data.loc[self.test_data['Promo2'] == 1, 'Promo2SinceYear'].fillna(self.test_data['Promo2SinceYear'].median(), inplace=True)
+    self.test_data.loc[self.test_data['Promo2'] == 1, 'Promo2SinceWeek'].fillna(self.test_data['Promo2SinceWeek'].mode()[0], inplace=True)
+    self.test_data.loc[self.test_data['Promo2'] == 1, 'PromoInterval'].fillna(self.test_data['PromoInterval'].mode()[0], inplace=True)
+
+    # Optionally log the imputation process for test data
+    logging.info(f"Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.")
+
+
+
+    if 'Open' in self.train_data.columns:
+        self.train_data['Open'].fillna(self.train_data['Open'].mode()[0], inplace=True)
+        logging.info(f"Filled missing 'Open' in train data.")
+
+    if 'Open' in self.test_data.columns:
+        self.test_data['Open'].fillna(self.test_data['Open'].mode()[0], inplace=True)
+        logging.info(f"Filled missing 'Open' in test data.")
+
     if 'CompetitionDistance' in self.train_data.columns:
         self.train_data['CompetitionDistance'].fillna(self.train_data['CompetitionDistance'].median(), inplace=True)
         logging.info(f"Filled missing 'CompetitionDistance' in train data.")
 
-    if 'PromoInterval' in self.train_data.columns:
-        self.train_data['PromoInterval'].fillna('None', inplace=True)
-        logging.info(f"Filled missing 'PromoInterval' in train data.")
+    if 'CompetitionDistance' in self.test_data.columns:
+        self.test_data['CompetitionDistance'].fillna(self.test_data['CompetitionDistance'].median(), inplace=True)
+        logging.info(f"Filled missing 'CompetitionDistance' in test data.")
+
+    if 'CompetitionOpenSinceMonth' in self.train_data.columns:
+        self.train_data['CompetitionOpenSinceMonth'].fillna(self.train_data['CompetitionOpenSinceMonth'].median(), inplace=True)
+        logging.info(f"Filled missing 'CompetitionOpenSinceMonth' in train data.")
+
+    if 'CompetitionOpenSinceMonth' in self.test_data.columns:
+        self.test_data['CompetitionOpenSinceMonth'].fillna(self.test_data['CompetitionOpenSinceMonth'].median(), inplace=True)
+        logging.info(f"Filled missing 'CompetitionOpenSinceMonth' in test data.")
+
+    if 'CompetitionOpenSinceYear' in self.train_data.columns:
+        self.train_data['CompetitionOpenSinceYear'].fillna(self.train_data['CompetitionOpenSinceYear'].median(), inplace=True)
+        logging.info(f"Filled missing 'CompetitionOpenSinceYear' in train data.")
+
+    if 'CompetitionOpenSinceYear' in self.test_data.columns:
+        self.test_data['CompetitionOpenSinceYear'].fillna(self.test_data['CompetitionOpenSinceYear'].median(), inplace=True)
+        logging.info(f"Filled missing 'CompetitionOpenSinceYear' in test data.")
+
 
     # Handle outliers in numeric columns for train_data and store_data
     # for dataset_name, dataset in {"train_data": self.merged_train_data, "store_data": self.merged_test_data}.items():
@@ -121,9 +204,10 @@ class CustomerBehaviourEDA:
 
     # Save the cleaned data, i.e., the train data
     self.train_data.to_csv(train_cleaned_path, index=False)
-    # self.save_data(train_cleaned_path, index=False)
-    # self.test_data.to_csv(test_cleaned_path, index=False)
     logging.info(f"Cleaned data saved to {train_cleaned_path}.")
+    # self.save_data(train_cleaned_path, index=False)
+    self.test_data.to_csv(test_cleaned_path, index=False)
+    logging.info(f"Cleaned data saved to {test_cleaned_path}.")
 
 
   def visualize_distributions(self):
