@@ -151,6 +151,25 @@ class StoreSalesPrediction:
 
       return pipeline
 
+  # Feature importance implementation
+  def feature_importance(self):
+     if isinstance(self.model, Pipeline):
+        model = self.model.named_steps['regressor']
+        importance = model.feature_importances_
+        features = self.data.drop(['Sales', 'Date'], axis=1).columns
+        importance_df = pd.DataFrame({'Feature': features, 'Importance': importance})
+        importance_df.sort_values(by='Importance', ascending=False, inplace=True)
+
+
+        self.logger.info('Feature Importance: ')
+        self.logger.info(importance_df)
+
+
+        sns.barplot(x='Importance', y='Feature', data=importance_df)
+        plt.title('Feature Importance')
+        plt.savefig('plots/feature_importance.png', dpi=300, bbox_inches='tight')
+        plt.show()
+
   def save_model(self):
      timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
      filename = f"Store_sales_model_{timestamp}.pkl"
