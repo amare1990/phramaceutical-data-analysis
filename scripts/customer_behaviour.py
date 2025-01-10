@@ -51,6 +51,11 @@ class CustomerBehaviourEDA:
         if self.store_data is None or self.train_data is None or self.test_data is None:
             raise ValueError("Datasets are not loaded. Call the `load_data` method first.")
 
+        # Drop 'Unnamed: 0' columns from store, train and test data
+        self.store_data = self.store_data.drop("Unnamed: 0", axis=1)
+        self.train_data = self.train_data.drop("Unnamed: 0", axis=1)
+        self.test_data = self.test_data.drop("Unnamed: 0", axis=1)
+
         # Merge store with train
         self.merged_train_data = pd.merge(self.train_data, self.store_data, on='Store', how='inner')
 
@@ -103,6 +108,7 @@ class CustomerBehaviourEDA:
     self.train_data = self.train_data.drop_duplicates()
     self.test_data = self.test_data.drop_duplicates()
     logging.info(f"Dropped duplicate rows")
+
 
     # Calculate the percentage of missing values (NaN) and infinite values for each row train data
     threshold = 0.5  # 50% threshold
