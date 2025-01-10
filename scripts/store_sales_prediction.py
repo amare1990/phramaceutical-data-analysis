@@ -14,6 +14,12 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 import datetime
 import pickle
 
+# For PyTorch
+from statsmodels.tsa.stattools import adfuller
+import torch
+import torch.nn as nn
+from torch.utils.data import DataLoader, Dataset
+
 
 import logging
 
@@ -178,4 +184,89 @@ class StoreSalesPrediction:
         pickle.dump(self.model, file)
 
      self.logger.info(f'Model saved as {filename}. ')
+
+
+  class SalesDataset(Dataset):
+        def __init__(self, data, look_back=1):
+            self.data = data
+            self.look_back = look_back
+            self.X, self.y = self.create_supervised_data(data, look_back)
+
+        def create_supervised_data(self, data, look_back=1):
+            X, y = [], []
+            for i in range(len(data) - look_back):
+                X.append(data[i:i + look_back])
+                y.append(data[i + look_back])
+            return np.array(X), np.array(y)
+
+        def __len__(self):
+            return len(self.X)
+
+        def __getitem__(self, idx):
+            return torch.tensor(self.X[idx], dtype=torch.float32), torch.tensor(self.y[idx], dtype=torch.float32)
+
+  def build_LSTM_model(self):
+      self.logger.info("Building LSTM model using PyTorch...")
+      # Convert into Time-series data
+      sales_data = self.data[['Sales', 'Date']].set_index('Date')
+      sales_data = sales_data.sort_index()
+
+      # Check stationarity
+      adf_test = adfuller(sales_data['Sales'])
+      self.logger.info(f"ADF Test Statistic: {adf_test[0]}")
+      self.logger.info(f"ADF Test p-value: {adf_test[1]}")
+
+      # Prepare supervised learning data
+      look_back = 7
+      scaled_data = self.scalar.fit_transform(sales_data['Sales'].values.reshape(-1, 1))
+
+      # Prepare dataset
+      dataset = self.SalesDataset(scaled_data, look_back)
+
+      # Split dataset
+      split = int(len(dataset) * 0.8)
+      train_data = dataset[:split]
+      test_data = dataset[split:]
+
+      train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
+      test_loader = DataLoader(test_data, batch_size=32, shuffle=False)
+
+      class LSTMModel(nn.Module):
+          def __init__(self, input_dim, hidden_dim, output_dim, num_layers=1):
+              super(LSTMModel, self).__init__()
+              self.lstm = nn.LSTM(input_dim, hidden_dim, num_layers, batch_first=True)
+              self.fc = nn.Linear(hidden_dim, output_dim)
+
+          def forward(self, x):
+              lstm_out, _ = self.lstm(x)
+              out = self.fc(lstm_out[:, -1, :])
+              return out
+
+      input_dim = 1
+      hidden_dim = 50
+      output_dim = 1
+      num_layers = 2
+      model = LSTMModel(input_dim, hidden_dim, output_dim, num_layers)
+
+      criterion = nn.MSELoss()
+      optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+
+      self.logger.info("Training PyTorch LSTM model...")
+      epochs = 50
+      for epoch in range(epochs):
+          model.train()
+          train_loss = 0.0
+          for inputs, targets in train_loader:
+              optimizer.zero_grad()
+              outputs = model(inputs)
+              loss = criterion(outputs, targets.unsqueeze(1))
+              loss.backward()
+              optimizer.step()
+              train_loss += loss.item()
+          self.logger.info(f"Epoch {epoch + 1}/{epochs}, Loss: {train_loss / len(train_loader):.4f}")
+
+      self.logger.info("PyTorch LSTM model training complete.")
+      return model
+
+
 
