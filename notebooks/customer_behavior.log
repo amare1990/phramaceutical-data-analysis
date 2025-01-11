@@ -1017,3 +1017,205 @@ freq          1015       851884    472281     474976        410892
 2025-01-04 14:19:34,437 - INFO - Analyzing new competitor impact on sales with competition open dates.
 2025-01-04 14:19:35,110 - INFO - Average sales before competition: 5499.949352920602
 2025-01-04 14:19:35,110 - INFO - Average sales after competition: 5291.286396762365
+2025-01-05 14:36:26,788 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 14:37:14,713 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 14:39:57,490 - INFO - Starting data cleaning.
+2025-01-05 14:39:57,827 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 14:39:57,837 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 14:39:57,850 - INFO - Filled missing 'Open' in train data.
+2025-01-05 14:39:57,851 - INFO - Filled missing 'Open' in test data.
+2025-01-05 14:39:57,868 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 14:39:57,870 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 14:39:58,100 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-05 14:39:58,366 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-05 14:39:58,541 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-05 14:40:05,618 - INFO - Cleaned data saved to ../data/train_cleaned_data.
+2025-01-05 14:41:19,826 - INFO - Starting data cleaning.
+2025-01-05 14:41:20,013 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 14:41:20,021 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 14:41:20,029 - INFO - Filled missing 'Open' in train data.
+2025-01-05 14:41:20,030 - INFO - Filled missing 'Open' in test data.
+2025-01-05 14:41:20,040 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 14:41:20,041 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 14:41:20,270 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 3296
+2025-01-05 14:41:20,476 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 2469
+2025-01-05 14:41:20,710 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 58520
+2025-01-05 14:41:29,038 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 14:41:42,321 - INFO - Starting data cleaning.
+2025-01-05 14:41:42,508 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 14:41:42,519 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 14:41:42,531 - INFO - Filled missing 'Open' in train data.
+2025-01-05 14:41:42,533 - INFO - Filled missing 'Open' in test data.
+2025-01-05 14:41:42,547 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 14:41:42,549 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 14:41:42,729 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 769
+2025-01-05 14:41:42,889 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 0
+2025-01-05 14:41:43,019 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 34920
+2025-01-05 14:41:50,975 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 14:56:35,350 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 14:56:53,238 - INFO - Starting data cleaning.
+2025-01-05 14:56:53,413 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 14:56:53,420 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 14:56:53,427 - INFO - Filled missing 'Open' in train data.
+2025-01-05 14:56:53,428 - INFO - Filled missing 'Open' in test data.
+2025-01-05 14:56:53,444 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 14:56:53,445 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 14:56:53,460 - INFO - Filled missing 'CompetitionOpenSinceMonth' in train data.
+2025-01-05 14:56:53,462 - INFO - Filled missing 'CompetitionOpenSinceMonth' in test data.
+2025-01-05 14:56:53,474 - INFO - Filled missing 'CompetitionOpenSinceYear' in train data.
+2025-01-05 14:56:53,476 - INFO - Filled missing 'CompetitionOpenSinceYear' in test data.
+2025-01-05 14:56:53,675 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-05 14:56:53,840 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-05 14:56:53,980 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-05 14:56:59,428 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 14:57:25,094 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 14:57:26,305 - INFO - Starting data cleaning.
+2025-01-05 14:57:26,456 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 14:57:26,462 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 14:57:26,469 - INFO - Filled missing 'Open' in train data.
+2025-01-05 14:57:26,470 - INFO - Filled missing 'Open' in test data.
+2025-01-05 14:57:26,483 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 14:57:26,484 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 14:57:26,496 - INFO - Filled missing 'CompetitionOpenSinceMonth' in train data.
+2025-01-05 14:57:26,497 - INFO - Filled missing 'CompetitionOpenSinceMonth' in test data.
+2025-01-05 14:57:26,510 - INFO - Filled missing 'CompetitionOpenSinceYear' in train data.
+2025-01-05 14:57:26,511 - INFO - Filled missing 'CompetitionOpenSinceYear' in test data.
+2025-01-05 14:57:26,682 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-05 14:57:26,921 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-05 14:57:27,075 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-05 14:57:33,035 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 15:11:12,643 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 15:11:17,726 - INFO - Starting data cleaning.
+2025-01-05 15:11:17,889 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 15:11:17,898 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 15:11:17,905 - INFO - Filled missing 'Open' in train data.
+2025-01-05 15:11:17,907 - INFO - Filled missing 'Open' in test data.
+2025-01-05 15:11:17,923 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 15:11:17,924 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 15:11:17,936 - INFO - Filled missing 'CompetitionOpenSinceMonth' in train data.
+2025-01-05 15:11:17,937 - INFO - Filled missing 'CompetitionOpenSinceMonth' in test data.
+2025-01-05 15:11:17,952 - INFO - Filled missing 'CompetitionOpenSinceYear' in train data.
+2025-01-05 15:11:17,953 - INFO - Filled missing 'CompetitionOpenSinceYear' in test data.
+2025-01-05 15:11:18,108 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-05 15:11:18,394 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-05 15:11:18,540 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-05 15:11:24,571 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 15:41:28,284 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 15:41:37,047 - INFO - Starting data cleaning.
+2025-01-05 15:46:24,642 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 15:46:29,781 - INFO - Starting data cleaning.
+2025-01-05 15:58:54,710 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 15:58:57,212 - INFO - Starting data cleaning.
+2025-01-05 16:01:47,533 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 16:01:48,948 - INFO - Starting data cleaning.
+2025-01-05 16:01:50,116 - INFO - Dropped duplicate rows
+2025-01-05 16:01:50,887 - INFO - Dropped 0 train data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:01:51,039 - INFO - Dropped columns, [] for which the perecentage of invalid in the train is greater than 50%
+2025-01-05 16:01:51,072 - INFO - Dropped 0 test data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:01:51,472 - INFO - Dropped columns where all values are NaN, inf, or null
+2025-01-05 16:01:51,477 - INFO - Dropped columns, [] for which the perecentage of invalid in the test is greater than 50%
+2025-01-05 16:01:51,492 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in train data.
+2025-01-05 16:01:51,496 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in test data.
+2025-01-05 16:01:51,614 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 16:01:51,621 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 16:01:51,631 - INFO - Filled missing 'Open' in train data.
+2025-01-05 16:01:51,633 - INFO - Filled missing 'Open' in test data.
+2025-01-05 16:01:51,646 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 16:01:51,647 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 16:01:51,661 - INFO - Filled missing 'CompetitionOpenSinceMonth' in train data.
+2025-01-05 16:01:51,662 - INFO - Filled missing 'CompetitionOpenSinceMonth' in test data.
+2025-01-05 16:01:51,675 - INFO - Filled missing 'CompetitionOpenSinceYear' in train data.
+2025-01-05 16:01:51,677 - INFO - Filled missing 'CompetitionOpenSinceYear' in test data.
+2025-01-05 16:01:52,061 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-05 16:01:52,300 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-05 16:01:52,537 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-05 16:01:59,784 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 16:02:00,090 - INFO - Cleaned data saved to ../data/test_cleaned_data.csv.
+2025-01-05 16:02:30,340 - INFO - Starting data cleaning.
+2025-01-05 16:02:32,226 - INFO - Dropped duplicate rows
+2025-01-05 16:02:33,311 - INFO - Dropped 0 train data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:02:33,641 - INFO - Dropped columns, [] for which the perecentage of invalid in the train is greater than 50%
+2025-01-05 16:02:33,688 - INFO - Dropped 0 test data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:02:34,111 - INFO - Dropped columns where all values are NaN, inf, or null
+2025-01-05 16:02:34,116 - INFO - Dropped columns, [] for which the perecentage of invalid in the test is greater than 50%
+2025-01-05 16:05:39,708 - INFO - Starting data cleaning.
+2025-01-05 16:05:43,134 - INFO - Dropped duplicate rows
+2025-01-05 16:05:45,239 - INFO - Dropped 0 train data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:05:45,947 - INFO - Dropped columns, [] for which the perecentage of invalid in the train is greater than 50%
+2025-01-05 16:05:46,043 - INFO - Dropped 0 test data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:05:46,841 - INFO - Dropped columns where all values are NaN, inf, or null
+2025-01-05 16:05:46,850 - INFO - Dropped columns, [] for which the perecentage of invalid in the test is greater than 50%
+2025-01-05 16:05:46,867 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in train data.
+2025-01-05 16:05:46,869 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in test data.
+2025-01-05 16:05:46,996 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 16:05:47,006 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 16:05:47,015 - INFO - Filled missing 'Open' in train data.
+2025-01-05 16:05:47,016 - INFO - Filled missing 'Open' in test data.
+2025-01-05 16:05:47,036 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 16:05:47,037 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 16:05:47,050 - INFO - Filled missing 'CompetitionOpenSinceMonth' in train data.
+2025-01-05 16:05:47,051 - INFO - Filled missing 'CompetitionOpenSinceMonth' in test data.
+2025-01-05 16:05:47,063 - INFO - Filled missing 'CompetitionOpenSinceYear' in train data.
+2025-01-05 16:05:47,064 - INFO - Filled missing 'CompetitionOpenSinceYear' in test data.
+2025-01-05 16:05:47,460 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 3296
+2025-01-05 16:05:47,861 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 2469
+2025-01-05 16:05:48,311 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 58520
+2025-01-05 16:06:02,559 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 16:06:03,246 - INFO - Cleaned data saved to ../data/test_cleaned_data.csv.
+2025-01-05 16:06:23,819 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 16:06:25,364 - INFO - Starting data cleaning.
+2025-01-05 16:06:26,373 - INFO - Dropped duplicate rows
+2025-01-05 16:06:27,087 - INFO - Dropped 0 train data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:06:27,165 - INFO - Dropped columns, [] for which the perecentage of invalid in the train is greater than 50%
+2025-01-05 16:06:27,197 - INFO - Dropped 0 test data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:06:27,498 - INFO - Dropped columns where all values are NaN, inf, or null
+2025-01-05 16:06:27,503 - INFO - Dropped columns, [] for which the perecentage of invalid in the test is greater than 50%
+2025-01-05 16:06:27,524 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in train data.
+2025-01-05 16:06:27,528 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in test data.
+2025-01-05 16:06:27,714 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 16:06:27,727 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 16:06:27,739 - INFO - Filled missing 'Open' in train data.
+2025-01-05 16:06:27,741 - INFO - Filled missing 'Open' in test data.
+2025-01-05 16:06:27,760 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 16:06:27,762 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 16:06:27,783 - INFO - Filled missing 'CompetitionOpenSinceMonth' in train data.
+2025-01-05 16:06:27,785 - INFO - Filled missing 'CompetitionOpenSinceMonth' in test data.
+2025-01-05 16:06:27,807 - INFO - Filled missing 'CompetitionOpenSinceYear' in train data.
+2025-01-05 16:06:27,809 - INFO - Filled missing 'CompetitionOpenSinceYear' in test data.
+2025-01-05 16:06:28,010 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-05 16:06:28,212 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-05 16:06:28,418 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-05 16:06:36,005 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 16:06:36,313 - INFO - Cleaned data saved to ../data/test_cleaned_data.csv.
+2025-01-05 16:06:56,195 - INFO - Starting data cleaning.
+2025-01-05 16:06:57,725 - INFO - Dropped duplicate rows
+2025-01-05 16:06:59,045 - INFO - Dropped 0 train data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:06:59,188 - INFO - Dropped columns, [] for which the perecentage of invalid in the train is greater than 50%
+2025-01-05 16:06:59,238 - INFO - Dropped 0 test data rows with more than 50% missing, infinite, or null values.
+2025-01-05 16:06:59,758 - INFO - Dropped columns where all values are NaN, inf, or null
+2025-01-05 16:06:59,764 - INFO - Dropped columns, [] for which the perecentage of invalid in the test is greater than 50%
+2025-01-05 19:20:58,685 - INFO - CustomerBehaviorEDA instance created.
+2025-01-05 19:21:19,506 - INFO - Starting data cleaning.
+2025-01-05 19:21:21,684 - INFO - Dropped duplicate rows
+2025-01-05 19:21:22,464 - INFO - Dropped 0 train data rows with more than 50% missing, infinite, or null values.
+2025-01-05 19:21:22,592 - INFO - Dropped columns, [] for which the perecentage of invalid in the train is greater than 50%
+2025-01-05 19:21:22,618 - INFO - Dropped 0 test data rows with more than 50% missing, infinite, or null values.
+2025-01-05 19:21:22,872 - INFO - Dropped columns where all values are NaN, inf, or null
+2025-01-05 19:21:22,875 - INFO - Dropped columns, [] for which the perecentage of invalid in the test is greater than 50%
+2025-01-05 19:21:22,887 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in train data.
+2025-01-05 19:21:22,889 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==0 stores in test data.
+2025-01-05 19:21:23,437 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in train data.
+2025-01-05 19:21:23,442 - INFO - Filled missing Promo2SinceYear, Promo2SinceWeek, and PromoInterval for Promo2==1 stores in test data.
+2025-01-05 19:21:23,449 - INFO - Filled missing 'Open' in train data.
+2025-01-05 19:21:23,450 - INFO - Filled missing 'Open' in test data.
+2025-01-05 19:21:23,463 - INFO - Filled missing 'CompetitionDistance' in train data.
+2025-01-05 19:21:23,464 - INFO - Filled missing 'CompetitionDistance' in test data.
+2025-01-05 19:21:23,475 - INFO - Filled missing 'CompetitionOpenSinceMonth' in train data.
+2025-01-05 19:21:23,476 - INFO - Filled missing 'CompetitionOpenSinceMonth' in test data.
+2025-01-05 19:21:23,542 - INFO - Filled missing 'CompetitionOpenSinceYear' in train data.
+2025-01-05 19:21:23,544 - INFO - Filled missing 'CompetitionOpenSinceYear' in test data.
+2025-01-05 19:21:24,438 - INFO - Outliers removed from column 'Sales' in train_data. Total removed: 26694
+2025-01-05 19:21:24,624 - INFO - Outliers removed from column 'Customers' in train_data. Total removed: 22641
+2025-01-05 19:21:24,785 - INFO - Outliers removed from column 'CompetitionDistance' in train_data. Total removed: 87992
+2025-01-05 19:21:31,587 - INFO - Cleaned data saved to ../data/train_cleaned_data.csv.
+2025-01-05 19:21:31,877 - INFO - Cleaned data saved to ../data/test_cleaned_data.csv.
