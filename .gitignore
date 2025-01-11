@@ -1,7 +1,10 @@
-# ignore virtual environments
+# Ignore virtual environments
 venv-pharma
+env/
+venv/
+ENV/
 
-# Ignore python and jupyter notebook cache files
+# Ignore Python and Jupyter notebook cache files
 __pycache__/
 *.pyc
 *.pyo
@@ -15,3 +18,46 @@ notebooks/plots/
 
 # Ignore data
 data/
+
+# Django specific
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__/
+
+# Local settings and secrets
+local_settings.py
+*.env
+
+# SQLite database files (if you're using SQLite)
+db.sqlite3
+*.sqlite3
+
+# Media and static files
+/media/
+/static/
+
+# Django migrations
+*/migrations/
+
+# Coverage reports
+.coverage
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+
+# Django REST framework test cases
+*.test.py
+
+# IDE and editor-specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+*.iml
+
+# Python virtual environment directories
+virtualenv/
