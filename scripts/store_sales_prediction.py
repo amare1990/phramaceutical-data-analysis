@@ -207,6 +207,7 @@ class StoreSalesPrediction:
 
   def build_LSTM_model(self):
       self.logger.info("Building LSTM model using PyTorch...")
+
       # Convert into Time-series data
       sales_data = self.data[['Sales', 'Date']].set_index('Date')
       sales_data = sales_data.sort_index()
@@ -231,6 +232,7 @@ class StoreSalesPrediction:
       train_loader = DataLoader(train_data, batch_size=32, shuffle=True)
       test_loader = DataLoader(test_data, batch_size=32, shuffle=False)
 
+      # Define the LSTM model
       class LSTMModel(nn.Module):
           def __init__(self, input_dim, hidden_dim, output_dim, num_layers=1):
               super(LSTMModel, self).__init__()
@@ -242,6 +244,7 @@ class StoreSalesPrediction:
               out = self.fc(lstm_out[:, -1, :])
               return out
 
+      # Model and hyperparameters
       input_dim = 1
       hidden_dim = 50
       output_dim = 1
@@ -249,24 +252,78 @@ class StoreSalesPrediction:
       model = LSTMModel(input_dim, hidden_dim, output_dim, num_layers)
 
       criterion = nn.MSELoss()
-      optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+      optimizer = torch.optim.Adam(model.parameters(), lr=0.0005)
 
+      # Training
       self.logger.info("Training PyTorch LSTM model...")
-      epochs = 50
+      epochs = 10
+      train_losses = []  # To store training loss for plotting
+
       for epoch in range(epochs):
           model.train()
           train_loss = 0.0
           for inputs, targets in train_loader:
               optimizer.zero_grad()
               outputs = model(inputs)
-              loss = criterion(outputs, targets.unsqueeze(1))
+              loss = criterion(outputs, targets.unsqueeze(1))  # Unsqueeze target for shape compatibility
               loss.backward()
               optimizer.step()
               train_loss += loss.item()
-          self.logger.info(f"Epoch {epoch + 1}/{epochs}, Loss: {train_loss / len(train_loader):.4f}")
+
+          avg_loss = train_loss / len(train_loader)
+          train_losses.append(avg_loss)
+          self.logger.info(f"Epoch {epoch + 1}/{epochs}, Loss: {avg_loss:.4f}")
 
       self.logger.info("PyTorch LSTM model training complete.")
+
+      # Evaluate on test data
+      self.logger.info("Evaluating model on test data...")
+      model.eval()
+      test_predictions = []
+      test_targets = []
+
+      with torch.no_grad():
+          for inputs, targets in test_loader:
+              outputs = model(inputs)
+              test_predictions.append(outputs.squeeze(1).numpy())
+              test_targets.append(targets.numpy())
+
+      # Flatten predictions and targets
+      test_predictions = np.concatenate(test_predictions)
+      test_targets = np.concatenate(test_targets)
+
+      # Rescale to original scale
+      test_predictions = self.scalar.inverse_transform(test_predictions.reshape(-1, 1)).flatten()
+      test_targets = self.scalar.inverse_transform(test_targets.reshape(-1, 1)).flatten()
+
+      # Calculate metrics
+      rmse = np.sqrt(np.mean((test_predictions - test_targets) ** 2))
+      mae = np.mean(np.abs(test_predictions - test_targets))
+      self.logger.info(f"Test RMSE: {rmse:.4f}")
+      self.logger.info(f"Test MAE: {mae:.4f}")
+
+      # Plot training loss
+      # import matplotlib.pyplot as plt
+      plt.figure(figsize=(10, 6))
+      plt.plot(range(1, epochs + 1), train_losses, label="Training Loss")
+      plt.xlabel("Epoch")
+      plt.ylabel("Loss")
+      plt.title("Training Loss Over Epochs")
+      plt.legend()
+      plt.grid(True)
+      plt.savefig('plots/training_loss.png', dpi=300, bbox_inches='tight')
+      plt.show()
+
+      # Plot predictions vs targets
+      plt.figure(figsize=(10, 6))
+      plt.plot(test_targets, label="True Values")
+      plt.plot(test_predictions, label="Predictions")
+      plt.title("Test Predictions vs True Values")
+      plt.xlabel("Time Step")
+      plt.ylabel("Sales")
+      plt.legend()
+      plt.grid(True)
+      plt.savefig('plots/predictions_vs_targets.png', dpi=300, bbox_inches='tight')
+      plt.show()
+
       return model
-
-
-
