@@ -178,12 +178,12 @@ class StoreSalesPrediction:
 
   def save_model(self):
      timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
-     filename = f"Store_sales_model_{timestamp}.pkl"
+     filename = f"Store_sales_randomforest_model_{timestamp}.pkl"
 
      with open(filename, "wb") as file:
         pickle.dump(self.model, file)
 
-     self.logger.info(f'Model saved as {filename}. ')
+     self.logger.info(f'RandomForest Model saved as {filename}. ')
 
 
   class SalesDataset(Dataset):
@@ -327,3 +327,12 @@ class StoreSalesPrediction:
       plt.show()
 
       return model
+
+  def save_model(self):
+     timestamp = datetime.datetime.now().strftime("%Y-%m-%d-%H-%M-%S")
+     filename = f"Store_sales_lstm_model_{timestamp}.pkl"
+
+     with open(filename, "wb") as file:
+        pickle.dump(self.model, file)
+
+     self.logger.info(f'LSTM Model saved as {filename}. ')
