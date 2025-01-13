@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from .services import PredictionService
 
-class predictView(APIView):
+class PredictView(APIView):
   """
   Handles POST requests for making predictions using the trained model.
   """
