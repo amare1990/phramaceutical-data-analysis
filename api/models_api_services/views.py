@@ -16,7 +16,7 @@ class PredictView(APIView):
     Accepts input data in JSON format and returns model predictions.
     """
     try:
-      input_data = request.data.get('input': None)
+      input_data = request.data.get('input', None)
       if not input_data:
         return Response({"error": "No input data provided"}, status=status.HTTP_400_BAD_REQUEST)
 
