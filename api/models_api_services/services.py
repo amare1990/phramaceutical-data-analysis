@@ -18,18 +18,26 @@ class PredictionService:
     except Exception as e:
       raise ValueError(f"Error loading model: {e}")
 
+  def preprocess_input(self, input_data):
+        """
+        Preprocess input data for prediction.
+        """
+        try:
+            # Example preprocessing (adapt to your dataset and model requirements)
+            input_array = np.array(input_data).reshape(1, -1)
+            return input_array
+        except Exception as e:
+            raise ValueError(f"Error preprocessing input: {e}")
 
 
-def predict(self, data):
-  """
-
-  Preprocess input data and make predictions.
-  :param data: test_data
-  :return: model predictions
-  """
-
-  input_data = np.array(data)
-  predictions = self.model.predict(input_data)
-  return predictions.tolist()
+  def predict(self, input_data):
+    """
+    Preprocess input data and make predictions.
+    :param data: test_data
+    :return: model predictions
+    """
+    preprocessed_data = self.preprocess_input(input_data)
+    predictions = self.model.predict(preprocessed_data)
+    return predictions.tolist()
 
 
