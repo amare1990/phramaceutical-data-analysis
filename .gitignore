@@ -61,3 +61,6 @@ coverage.xml
 
 # Python virtual environment directories
 virtualenv/
+
+# Ignore versions as they are very large
+model_versions/
