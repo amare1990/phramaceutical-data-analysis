@@ -1,6 +1,6 @@
-# Car Insurance Risk Assessment and Predictive Analysis
+# Pharmaceutical Data Analysis and Prediction
 
-> Car Insurance Risk Assessment and Predictive Analysis is a data science project designed to statistically analyze and extract insights from the data from AlphaCare Insurance Solutions (ACIS), a car insurance company in South Africa. This data science project attempts to conduct Exploratory Data Discovery and Analysis (EDA). It finds key insights from the data using statistical and EDA analysis and from the histogram, bar charts, and correlation matrix. It is implemented using Python programming language and various tools including jupyter notebook.
+> Pharmaceutical Data Analysis and Prediction is a data science project designed to statistically analyze and extract insights from the data from Rossmann Pharmaceuticals. This data science project attempts to conduct Exploratory Data Discovery and Analysis (EDA). It finds key insights from the data using statistical and EDA analysis and from the histogram, bar charts, and correlation matrix. It also implements preprocessing functionality and builds Machine Learning (ML) models using RandomForest and Deep Learning (DL) using LSTM sequence models. It is implemented using Python programming language and various tools including jupyter notebook.
 
 ## Built With
 
@@ -40,6 +40,7 @@ You can clone my project and use it freely and then contribute to this project.
 - Git, GitHub setup, adding `pylint' in the GitHub workflows
 - Statistical and EDA analysis on the data, ploting
 - Gaining insightful information by cinducting various tricks and visualizations
+- Preprocessing data
 
 #### GitHub Action
 - Go to the main directory of this repo, create paths, `.github/workflows`. And then add `pylint` linters
@@ -74,6 +75,21 @@ In this portion of the task, the following analysis has been conducted.
 - Effect of opening or re-opening of new competitor on stores via visualizations
 
   Run /open the jupyter notebook named `customer_behavior_eda.ipynb` to clean data
+
+### Store Sales Prediction
+- The main functionality is implemented in `store_sales_prediction.py` module and the `store_sales_prediction_pipeline_processor.py` pipelines all processes.  `store_sales_prediction_pipeline_processor.ipynb` is the notebook you call the method in the pipeline processor module.
+- In this portion of the task, the following analysis has been conducted.
+- Extracting couple of features from the data
+- Preprocessing the data
+- Building `RandomForestRegression` regression model to predict total sales
+- Building `LSTM` regression model to predict total sales
+- Saving the built models
+
+### Creating API endpoints
+- Chose `Django rest framework` as a framework for building a REST api
+- Installed django and django rest framework
+- Imlemented a module, `services.py` inside the django app, `models_api_services` to add functionality to load the model built and add a functionality to preprocess the data and predict
+- Created an api endpoints to process posted requested data and predict. This functionality is written in the `views.py` script inside the django app.
 
 
 
