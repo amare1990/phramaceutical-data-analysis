@@ -2,7 +2,7 @@ import pandas as pd
 
 
 # Data paths
-train_data_path = "/content/drive/MyDrive/10Academy/week4/train_cleaned_data.csv"
+train_data_path = "../data/train_cleaned_data.csv"
 try:
     train_data = pd.read_csv(train_data_path)
     # test_data = pd.read_csv(test_data_path)
@@ -15,6 +15,7 @@ from scripts.store_sales_prediction import StoreSalesPrediction
 
 def store_sales_prediction_pipeline_processor():
     # Intializing the class
+    train_data = pd.read_csv(train_data_path)
     predictor = StoreSalesPrediction(train_data)
 
     # preprocessing data
