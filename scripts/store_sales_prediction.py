@@ -56,6 +56,9 @@ class StoreSalesPrediction:
 
     # Scale numerical columns (exclude 'Id' and 'Sales' if present)
     numeric_cols = dataset.select_dtypes(include=np.number).columns
+    # Fit and transform the numeric columns
+    dataset[numeric_cols] = self.scaler.fit_transform(dataset[numeric_cols])
+    self.data = dataset
 
     # Handle datetime columns
     dataset['Date'] = pd.to_datetime(dataset['Date'])
