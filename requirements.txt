@@ -27,6 +27,7 @@ fastjsonschema==2.21.1
 filelock==3.16.1
 fonttools==4.55.3
 fsspec==2024.12.0
+gunicorn==23.0.0
 h11==0.14.0
 httpcore==1.0.7
 httpx==0.28.1
